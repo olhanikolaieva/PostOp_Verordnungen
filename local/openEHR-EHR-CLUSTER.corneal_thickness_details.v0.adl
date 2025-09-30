@@ -1,28 +1,28 @@
-archetype (adl_version=1.4; uid=98142d61-b266-4228-b88f-b8ff11a2e948)
+﻿archetype (adl_version=1.4; uid=98142d61-b266-4228-b88f-b8ff11a2e948)
 	openEHR-EHR-CLUSTER.corneal_thickness_details.v0
 
 concept
-	[at0000]
-
+	[at0000]	-- Central corneal thickness details
 language
 	original_language = <[ISO_639-1::en]>
-
 description
 	original_author = <
-		["date"] = <"2015-06-06">
 		["name"] = <"Aitor Eguzkitza">
 		["organisation"] = <"Universidad Pública de Navarra - Complejo Hospitalario de Navarra">
 		["email"] = <"aitor.eguzkiza@unavarra.es">
+		["date"] = <"2015-06-06">
 	>
-	lifecycle_state = <"in_development">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To report measurements for the central corneal thickness.">
-			copyright = <"© openEHR Foundation">
 			use = <"As support test for fine-tune other measurements. For example to correct the intraocular pressure measurement.">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -35,9 +35,9 @@ description
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- Central corneal thickness details
+	CLUSTER[at0000] matches {	-- Central corneal thickness details
 		items cardinality matches {1..*; unordered} matches {
-			ELEMENT[at0001] matches {    -- Central Corneal Thickness (CCT)
+			ELEMENT[at0001] matches {	-- Central Corneal Thickness (CCT)
 				value matches {
 					C_DV_QUANTITY <
 						property = <[openehr::122]>
@@ -51,12 +51,14 @@ definition
 					>
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Measurement Method
+			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Measurement Method
 				value matches {
-					DV_CODED_TEXT matches {*}
+					DV_CODED_TEXT matches {
+						defining_code matches {[ac0001]}		-- Corneal thickness measurement devices
+					}
 				}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Correction parameter
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Correction parameter
 				value matches {
 					C_DV_QUANTITY <
 						property = <[openehr::125]>
@@ -67,17 +69,17 @@ definition
 								precision = <|1|>
 							>
 						>
-
 						assumed_value = <
 							units = <"mm[Hg]">
-							magnitude = <0.0>
 							precision = <1>
+							magnitude = <0.0>
 						>
 					>
 				}
 			}
 		}
 	}
+
 
 ontology
 	terminologies_available = <"SNOMED-CT", ...>
@@ -103,7 +105,17 @@ ontology
 			>
 		>
 	>
-	term_binding = <
+	constraint_definitions = <
+		["en"] = <
+			items = <
+				["ac0001"] = <
+					text = <"Corneal thickness measurement devices">
+					description = <"List of medical devices that include the functionality of corneal pachymetry.">
+				>
+			>
+		>
+	>
+	term_bindings = <
 		["SNOMED-CT"] = <
 			items = <
 				["at0001"] = <[SNOMED-CT::422162007]>
