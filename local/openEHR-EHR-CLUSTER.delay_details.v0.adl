@@ -1,30 +1,30 @@
-archetype (adl_version=1.4; uid=39aa7393-2b87-4206-a4f8-1daac636e4a1)
+﻿archetype (adl_version=1.4; uid=39aa7393-2b87-4206-a4f8-1daac636e4a1)
 	openEHR-EHR-CLUSTER.delay_details.v0
 
 concept
-	[at0000]
-
+	[at0000]	-- Delay details
 language
 	original_language = <[ISO_639-1::en]>
-
 description
 	original_author = <
-		["date"] = <"2022-06-27">
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Atomica Informatics">
 		["email"] = <"heather.leslie@atomicainformatics.com">
+		["date"] = <"2022-06-27">
 	>
-	lifecycle_state = <"in_development">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record information about recognised subcategories of delay or specific delays in seeking, reaching or receiving healthcare using the \"Three Delays\" framework.">
-			copyright = <"© openEHR Foundation">
 			use = <"Use to record information about recognised subcategories of delay or specific delays in seeking, reaching or receiving healthcare using the \"Three Delays\" framework.
 
 This archetype has been designed to be nested within the 'Delay details' SLOT in the  ADMIN_ENTRY.three_delays_model archetype, so that variable levels of detail can be recorded.">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -89,6 +89,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
