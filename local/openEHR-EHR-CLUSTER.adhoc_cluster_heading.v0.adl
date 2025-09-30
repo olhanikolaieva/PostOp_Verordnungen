@@ -1,9 +1,8 @@
-archetype (adl_version=1.4; uid=2e9d508e-96e0-4636-9369-8531e6dda595)
+﻿archetype (adl_version=1.4; uid=2e9d508e-96e0-4636-9369-8531e6dda595)
 	openEHR-EHR-CLUSTER.adhoc_cluster_heading.v0
 
 concept
-	[at0000]
-
+	[at0000]	-- Adhoc cluster heading
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -24,36 +23,38 @@ language
 			>
 		>
 	>
-
 description
 	original_author = <
-		["date"] = <"2013-05-14">
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Atomica Informatics">
 		["email"] = <"heather.leslie@atomicainformatics.com">
+		["date"] = <"2013-05-14">
 	>
-	lifecycle_state = <"in_development">
-	other_contributors = <"Heath Frankel, Ocean Informatics, Australia","Sistine Barretto-Daniels, Ocean Informatics, Australia">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"Eine generische Clusterüberschrift, welche üblicherweise im Rahmen der Template Modellierung umbenannt wird.">
-			keywords = <"Überschrift","Cluster","Ad hoc","Clusterüberschrift">
 			use = <"Für den Aufbau und die Benennung eines Clusters innerhalb eines definierten Templates.">
+			keywords = <"Überschrift", "Cluster", "Ad hoc", "Clusterüberschrift">
+			misuse = <"">
 		>
 		["sv"] = <
 			language = <[ISO_639-1::sv]>
 			purpose = <"En generell rubrik för CLUSTER-arketyper vars namn vanligtvis ändras lokalt på template-nivå.">
-			keywords = <"rubrik","ad hoc">
 			use = <"Används för att skapa och namnge ett CLUSTER i en lokal template.">
+			keywords = <"rubrik", "ad hoc">
+			misuse = <"">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"A generic cluster header which is normally renamed locally at template level.">
-			copyright = <"© Australian Digital Health Agency, openEHR Foundation">
 			use = <"To construct and name a cluster within a local template.">
+			misuse = <"">
+			copyright = <"© Australian Digital Health Agency, openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Heath Frankel, Ocean Informatics, Australia", "Sistine Barretto-Daniels, Ocean Informatics, Australia">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -77,6 +78,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
