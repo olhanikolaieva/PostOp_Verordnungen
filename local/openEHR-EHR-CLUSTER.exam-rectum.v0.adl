@@ -1,11 +1,10 @@
-archetype (adl_version=1.4; uid=c21ccb97-e3aa-4ff3-9101-7b97d14e09ba)
+﻿archetype (adl_version=1.4; uid=c21ccb97-e3aa-4ff3-9101-7b97d14e09ba)
 	openEHR-EHR-CLUSTER.exam-rectum.v0
-specialize
+specialise
 	openEHR-EHR-CLUSTER.exam.v2
 
 concept
-	[at0000.1]
-
+	[at0000.1]	-- Examination of the rectum
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -58,21 +57,17 @@ language
 			>
 		>
 	>
-
 description
 	original_author = <
-		["date"] = <"2025-07-08">
 		["name"] = <"Keisha Barwise">
 		["organisation"] = <"openEHR Foundation">
 		["email"] = <"keisha.barwise@openehr.org">
+		["date"] = <"2025-07-08">
 	>
-	lifecycle_state = <"in_development">
-	other_contributors = <"Nicola Ewen Hall, openEHR Fellow 2025 Jamaica","Khin Aung, Jamaica","Heather Leslie, openEHR Foundation, CCIO">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"*To record the findings observed during the physical examination of the rectum. (en)">
-			keywords = <"*Rectal exam, DRE, rectum, palpation, inspection, lesion, bleeding, mucosa, feces, foreign body. (en)", ...>
 			use = <"*Use to record the observed findings during the physical examination of the rectum.
 
 This archetype has been specifically designed to be used in the 'Examination detail' SLOT within the OBSERVATION.exam,  but can also be used within other ENTRY or CLUSTER archetypes, where clinically appropriate. Interpretation of the findings, for example 'No abnormality detected' or 'Moderate inflammation present', can be recorded using the 'Clinical interpretation' data element.
@@ -80,6 +75,7 @@ This archetype has been specifically designed to be used in the 'Examination det
 The CLUSTER.exclusion_exam archetype can be nested within the 'Examination not done' SLOT to optionally record explicit details about the examination not being performed.
 
 Use to incorporate the narrative descriptions of clinical findings within existing or legacy clinical systems into an archetyped format, using the 'Clinical Description' data element. (en)">
+			keywords = <"*Rectal exam, DRE, rectum, palpation, inspection, lesion, bleeding, mucosa, feces, foreign body. (en)", ...>
 			misuse = <"Nicht zur Darstellung der klinischen Anamnese zu verwenden – verwenden Sie spezifische OBSERVATION- und CLUSTER-Archetypen. Zum Beispiel OBSERVATION.story und CLUSTER.symptom_sign.
 
 Nicht zur Darstellung der Ergebnisse einer bildgebenden Untersuchung verwenden – verwenden Sie für diesen Zweck die Archetypenfamilie CLUSTER.imaging_exam.">
@@ -87,7 +83,6 @@ Nicht zur Darstellung der Ergebnisse einer bildgebenden Untersuchung verwenden �
 		["sv"] = <
 			language = <[ISO_639-1::sv]>
 			purpose = <"*To record the findings observed during the physical examination of the rectum. (en)">
-			keywords = <"*Rectal exam, DRE, rectum, palpation, inspection, lesion, bleeding, mucosa, feces, foreign body. (en)", ...>
 			use = <"*Use to record the observed findings during the physical examination of the rectum.
 
 This archetype has been specifically designed to be used in the 'Examination detail' SLOT within the OBSERVATION.exam,  but can also be used within other ENTRY or CLUSTER archetypes, where clinically appropriate. Interpretation of the findings, for example 'No abnormality detected' or 'Moderate inflammation present', can be recorded using the 'Clinical interpretation' data element.
@@ -95,6 +90,7 @@ This archetype has been specifically designed to be used in the 'Examination det
 The CLUSTER.exclusion_exam archetype can be nested within the 'Examination not done' SLOT to optionally record explicit details about the examination not being performed.
 
 Use to incorporate the narrative descriptions of clinical findings within existing or legacy clinical systems into an archetyped format, using the 'Clinical Description' data element. (en)">
+			keywords = <"*Rectal exam, DRE, rectum, palpation, inspection, lesion, bleeding, mucosa, feces, foreign body. (en)", ...>
 			misuse = <"*Not to be used for recording the clinical history - use specific OBSERVATION and CLUSTER archetypes. For example OBSERVATION.story and CLUSTER.symptom_sign.
 
 Not to be used for recording the results of an imaging examination - use the CLUSTER.imaging_exam family of archetypes for this purpose. (en)">
@@ -102,7 +98,6 @@ Not to be used for recording the results of an imaging examination - use the CLU
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"*To record the findings observed during the physical examination of the rectum. (en)">
-			keywords = <"*Rectal exam, DRE, rectum, palpation, inspection, lesion, bleeding, mucosa, feces, foreign body. (en)", ...>
 			use = <"*Use to record the observed findings during the physical examination of the rectum.
 
 This archetype has been specifically designed to be used in the 'Examination detail' SLOT within the OBSERVATION.exam,  but can also be used within other ENTRY or CLUSTER archetypes, where clinically appropriate. Interpretation of the findings, for example 'No abnormality detected' or 'Moderate inflammation present', can be recorded using the 'Clinical interpretation' data element.
@@ -110,6 +105,7 @@ This archetype has been specifically designed to be used in the 'Examination det
 The CLUSTER.exclusion_exam archetype can be nested within the 'Examination not done' SLOT to optionally record explicit details about the examination not being performed.
 
 Use to incorporate the narrative descriptions of clinical findings within existing or legacy clinical systems into an archetyped format, using the 'Clinical Description' data element. (en)">
+			keywords = <"*Rectal exam, DRE, rectum, palpation, inspection, lesion, bleeding, mucosa, feces, foreign body. (en)", ...>
 			misuse = <"Skal ikke brukes til å ta opp anamnese - bruk da spesifikke OBSERVATION og CLUSTER arketyper. For eksempel OBSERVATION.story og CLUSTER.symptom_sign.
 
 Skal ikke brukes for å registrere funn ved bildeundersøkelse - bruk arketype innen gruppen av CLUSTER.imaging_exam (Bildeundersøkelse) for dette.">
@@ -117,7 +113,6 @@ Skal ikke brukes for å registrere funn ved bildeundersøkelse - bruk arketype i
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
 			purpose = <"*To record the findings observed during the physical examination of the rectum. (en)">
-			keywords = <"*Rectal exam, DRE, rectum, palpation, inspection, lesion, bleeding, mucosa, feces, foreign body. (en)", ...>
 			use = <"*Use to record the observed findings during the physical examination of the rectum.
 
 This archetype has been specifically designed to be used in the 'Examination detail' SLOT within the OBSERVATION.exam,  but can also be used within other ENTRY or CLUSTER archetypes, where clinically appropriate. Interpretation of the findings, for example 'No abnormality detected' or 'Moderate inflammation present', can be recorded using the 'Clinical interpretation' data element.
@@ -125,6 +120,7 @@ This archetype has been specifically designed to be used in the 'Examination det
 The CLUSTER.exclusion_exam archetype can be nested within the 'Examination not done' SLOT to optionally record explicit details about the examination not being performed.
 
 Use to incorporate the narrative descriptions of clinical findings within existing or legacy clinical systems into an archetyped format, using the 'Clinical Description' data element. (en)">
+			keywords = <"*Rectal exam, DRE, rectum, palpation, inspection, lesion, bleeding, mucosa, feces, foreign body. (en)", ...>
 			misuse = <"*Not to be used for recording the clinical history - use specific OBSERVATION and CLUSTER archetypes. For example OBSERVATION.story and CLUSTER.symptom_sign.
 
 Not to be used for recording the results of an imaging examination - use the CLUSTER.imaging_exam family of archetypes for this purpose. (en)">
@@ -132,7 +128,6 @@ Not to be used for recording the results of an imaging examination - use the CLU
 		["el"] = <
 			language = <[ISO_639-1::el]>
 			purpose = <"*To record the findings observed during the physical examination of the rectum. (en)">
-			keywords = <"*Rectal exam, DRE, rectum, palpation, inspection, lesion, bleeding, mucosa, feces, foreign body. (en)", ...>
 			use = <"*Use to record the observed findings during the physical examination of the rectum.
 
 This archetype has been specifically designed to be used in the 'Examination detail' SLOT within the OBSERVATION.exam,  but can also be used within other ENTRY or CLUSTER archetypes, where clinically appropriate. Interpretation of the findings, for example 'No abnormality detected' or 'Moderate inflammation present', can be recorded using the 'Clinical interpretation' data element.
@@ -140,6 +135,7 @@ This archetype has been specifically designed to be used in the 'Examination det
 The CLUSTER.exclusion_exam archetype can be nested within the 'Examination not done' SLOT to optionally record explicit details about the examination not being performed.
 
 Use to incorporate the narrative descriptions of clinical findings within existing or legacy clinical systems into an archetyped format, using the 'Clinical Description' data element. (en)">
+			keywords = <"*Rectal exam, DRE, rectum, palpation, inspection, lesion, bleeding, mucosa, feces, foreign body. (en)", ...>
 			misuse = <"*Not to be used for recording the clinical history - use specific OBSERVATION and CLUSTER archetypes. For example OBSERVATION.story and CLUSTER.symptom_sign.
 
 Not to be used for recording the results of an imaging examination - use the CLUSTER.imaging_exam family of archetypes for this purpose.(en)">
@@ -147,8 +143,6 @@ Not to be used for recording the results of an imaging examination - use the CLU
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record the findings observed during the physical examination of the rectum.">
-			keywords = <"Rectal exam, DRE, rectum, palpation, inspection, lesion, bleeding, mucosa, feces, foreign body.", ...>
-			copyright = <"© openEHR Foundation">
 			use = <"Use to record the observed findings during the physical examination of the rectum.
 
 This archetype has been specifically designed to be used in the 'Examination detail' SLOT within the OBSERVATION.exam,  but can also be used within other ENTRY or CLUSTER archetypes, where clinically appropriate. Interpretation of the findings, for example 'No abnormality detected' or 'Moderate inflammation present', can be recorded using the 'Clinical interpretation' data element.
@@ -156,14 +150,15 @@ This archetype has been specifically designed to be used in the 'Examination det
 The CLUSTER.exclusion_exam archetype can be nested within the 'Examination not done' SLOT to optionally record explicit details about the examination not being performed.
 
 Use to incorporate the narrative descriptions of clinical findings within existing or legacy clinical systems into an archetyped format, using the 'Clinical Description' data element.">
+			keywords = <"Rectal exam, DRE, rectum, palpation, inspection, lesion, bleeding, mucosa, feces, foreign body.", ...>
 			misuse = <"Not to be used for recording the clinical history - use specific OBSERVATION and CLUSTER archetypes. For example OBSERVATION.story and CLUSTER.symptom_sign.
 
 Not to be used for recording the results of an imaging examination - use the CLUSTER.imaging_exam family of archetypes for this purpose.">
+			copyright = <"© openEHR Foundation">
 		>
 		["es"] = <
 			language = <[ISO_639-1::es]>
 			purpose = <"*To record the findings observed during the physical examination of the rectum. (en)">
-			keywords = <"*Rectal exam, DRE, rectum, palpation, inspection, lesion, bleeding, mucosa, feces, foreign body. (en)", ...>
 			use = <"*Use to record the observed findings during the physical examination of the rectum.
 
 This archetype has been specifically designed to be used in the 'Examination detail' SLOT within the OBSERVATION.exam,  but can also be used within other ENTRY or CLUSTER archetypes, where clinically appropriate. Interpretation of the findings, for example 'No abnormality detected' or 'Moderate inflammation present', can be recorded using the 'Clinical interpretation' data element.
@@ -171,11 +166,14 @@ This archetype has been specifically designed to be used in the 'Examination det
 The CLUSTER.exclusion_exam archetype can be nested within the 'Examination not done' SLOT to optionally record explicit details about the examination not being performed.
 
 Use to incorporate the narrative descriptions of clinical findings within existing or legacy clinical systems into an archetyped format, using the 'Clinical Description' data element. (en)">
+			keywords = <"*Rectal exam, DRE, rectum, palpation, inspection, lesion, bleeding, mucosa, feces, foreign body. (en)", ...>
 			misuse = <"*Not to be used for recording the clinical history - use specific OBSERVATION and CLUSTER archetypes. For example OBSERVATION.story and CLUSTER.symptom_sign.
 
 Not to be used for recording the results of an imaging examination - use the CLUSTER.imaging_exam family of archetypes for this purpose.(en)">
 		>
 	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Nicola Ewen Hall, openEHR Fellow 2025 Jamaica", "Khin Aung, Jamaica", "Heather Leslie, openEHR Foundation, CCIO">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -353,6 +351,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	terminologies_available = <"SNOMED-CT", ...>
@@ -1667,7 +1666,7 @@ ontology
 			>
 		>
 	>
-	term_binding = <
+	term_bindings = <
 		["SNOMED-CT"] = <
 			items = <
 				["at0001"] = <[SNOMED-CT(2025-07-01)::34402009]>
