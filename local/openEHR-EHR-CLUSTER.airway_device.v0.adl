@@ -1,23 +1,25 @@
-archetype (adl_version=1.4; uid=e8628389-87b3-43df-968b-395e5024e446)
+﻿archetype (adl_version=1.4; uid=e8628389-87b3-43df-968b-395e5024e446)
 	openEHR-EHR-CLUSTER.airway_device.v0
 
 concept
-	[at0000]
-
+	[at0000]	-- Airway Device
 language
 	original_language = <[ISO_639-1::en]>
-
 description
 	original_author = <
 		["date"] = <"2021-10-05">
 	>
-	lifecycle_state = <"in_development">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -57,6 +59,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
