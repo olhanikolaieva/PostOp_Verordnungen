@@ -1,29 +1,28 @@
-archetype (adl_version=1.4; uid=57ac4883-05c7-4c53-afd5-7b3246f3c023)
+﻿archetype (adl_version=1.4; uid=57ac4883-05c7-4c53-afd5-7b3246f3c023)
 	openEHR-EHR-CLUSTER.activity-running.v0
 
 concept
-	[at0000]
-
+	[at0000]	-- Running
 language
 	original_language = <[ISO_639-1::en]>
-
 description
 	original_author = <
-		["date"] = <"2019-04-15">
 		["name"] = <"Noah Hellman et. al.">
 		["organisation"] = <"Linköping University, Sweden">
+		["date"] = <"2019-04-15">
 	>
-	lifecycle_state = <"in_development">
-	other_contributors = <"Noah Hellman et. al. Linköping University, Sweden","Erik Sundvall, Linköping University + Region Östergötland, Sweden">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record a running session; e.g. data from a smartwatch or other device">
-			keywords = <"Running, jogging", ...>
-			copyright = <"© openEHR Foundation">
 			use = <"Can be used in the 'Activity' slot of openEHR-EHR-OBSERVATION.physical_activity.v0">
+			keywords = <"Running, jogging", ...>
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Noah Hellman et. al. Linköping University, Sweden", "Erik Sundvall, Linköping University + Region Östergötland, Sweden">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -157,6 +156,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
