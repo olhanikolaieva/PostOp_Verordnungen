@@ -1,32 +1,31 @@
-archetype (adl_version=1.4; uid=a6e5f197-a2b0-486f-8477-3913fd8ecbb8)
+﻿archetype (adl_version=1.4; uid=a6e5f197-a2b0-486f-8477-3913fd8ecbb8)
 	openEHR-EHR-CLUSTER.art_container_details.v0
 
 concept
-	[at0000]
-
+	[at0000]	-- ART container details
 language
 	original_language = <[ISO_639-1::en]>
-
 description
 	original_author = <
-		["date"] = <"2021-11-30">
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Atomica Informatics">
 		["email"] = <"heather.leslie@atomicainformatics.com">
+		["date"] = <"2021-11-30">
 	>
-	lifecycle_state = <"in_development">
-	other_contributors = <"Vebjørn Arntzen, Oslo University Hospital","Liv Laugen, Oslo University Hospital","Peter Fedorcsak, Oslo University Hospital">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record specific details about the contents of a container stored for the purposes of assisted reproduction treatment.">
-			keywords = <"container, assister reproduction, sperm, testicular, ovarian, tissue, oocyte, zygote, embryo, blastocyst", ...>
-			copyright = <"© openEHR Foundation">
 			use = <"Use to record specific details about the cells or tissue products stored in a container for the purposes of assisted reproduction treatment.
 
 The container may contain sperm, testicular tissue, ovarian tissue, or one or more oocyte or embryos.">
+			keywords = <"container, assister reproduction, sperm, testicular, ovarian, tissue, oocyte, zygote, embryo, blastocyst", ...>
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Vebjørn Arntzen, Oslo University Hospital", "Liv Laugen, Oslo University Hospital", "Peter Fedorcsak, Oslo University Hospital">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -196,6 +195,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
