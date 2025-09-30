@@ -1,9 +1,8 @@
-archetype (adl_version=1.4; uid=9a45f816-d56f-31d3-997a-cf59f63eec56)
+﻿archetype (adl_version=1.4)
 	openEHR-EHR-CLUSTER.diabetic_retinopathy_screening_result.v1
 
 concept
-	[at0000]
-
+	[at0000]	-- Clasificación de la retinopatía diabética durante su cribado
 language
 	original_language = <[ISO_639-1::es]>
 	translations = <
@@ -14,62 +13,61 @@ language
 			>
 		>
 	>
-
 description
 	original_author = <
-		["date"] = <"2013-04-22">
 		["name"] = <"Aitor Eguzkitza">
 		["organisation"] = <"Universidad Pública de Navarra - Complejo Hospitalario de Navarra">
 		["email"] = <"aitor.eguzkiza@unavarra.es">
+		["date"] = <"2013-04-22">
 	>
-	lifecycle_state = <"AuthorDraft">
-	other_contributors = <"José Andonegui Navarro","Luis Serrano Arriezu">
 	details = <
-		["en"] = <
-			language = <[ISO_639-1::en]>
-			purpose = <"*(es)">
-			copyright = <"© openEHR Foundation">
-			use = <"*(es)">
-			misuse = <"*(es)">
-		>
 		["es"] = <
 			language = <[ISO_639-1::es]>
 			purpose = <"Representación de la Clasificación de la retinopatía diabética según categoría 1 definida en las recomendaciones de la American Telemedicine Association (ATA).">
-			keywords = <"retinopatía diabética","clasificación">
-			copyright = <"© openEHR Foundation">
 			use = <"Concretar el diagnóstico de la retinopatía diabética en circuitos de cribado.">
+			keywords = <"retinopatía diabética", "clasificación">
 			misuse = <"Si se quiere especificar la gravedad de la retinopatía diabética.">
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"*(es)">
+			use = <"*(es)">
+			misuse = <"*(es)">
+			copyright = <"© openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"José Andonegui Navarro", "Luis Serrano Arriezu">
 	other_details = <
 		["references"] = <"American Telemedicine Association. Telehealth Practice Recommendations for Diabetic Retinopathy (Category 1). February 2011. Available from: http://www.americantelemed.org/docs/default-source/standards/telehealth-practice-recommendations-for-diabetic-retinopathy.pdf?sfvrsn=10">
 		["current_contact"] = <"Aitor Eguzkitza, Universidad Pública de Navarra - Complejo Hospitalario de Navarra, aitor.eguzkiza@unavarra.es">
 		["MD5-CAM-1.0.1"] = <"F9F94A2C31F765BF325CCDEBDC4E82A3">
-		["build_uid"] = <"706fc723-0520-3d8c-8b06-8ef304f5d4c0">
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- Clasificación de la retinopatía diabética durante su cribado
+	CLUSTER[at0000] matches {	-- Classification of diabetic retinopathy during its screening
 		items cardinality matches {1..*; unordered} matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Cribado de la RD
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- DR screening
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0002,    -- No RD aparente
-							at0003,    -- Retinopatía diabética aparente
-							at0004]    -- No valorable
+							at0002, 	-- No apparent DR
+							at0003, 	-- Diabetic retinopathy apparent 
+							at0004]	-- DR not assessable
 						}
 					}
 				}
 			}
-			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Comentarios
+			ELEMENT[at0005] occurrences matches {0..1} matches {	-- Comments
 				value matches {
 					DV_TEXT matches {*}
 				}
 			}
 		}
 	}
+
 
 ontology
 	terminologies_available = <"SNOMED-CT", ...>
@@ -117,7 +115,7 @@ ontology
 					description = <"ETDRS Levels of DR 10, 14, 15; DR absent ">
 				>
 				["at0003"] = <
-					text = <"Diabetic retinopathy apparent">
+					text = <"Diabetic retinopathy apparent ">
 					description = <"Level above 20 from the ETRDS classification">
 				>
 				["at0004"] = <
@@ -131,7 +129,7 @@ ontology
 			>
 		>
 	>
-	term_binding = <
+	term_bindings = <
 		["SNOMED-CT"] = <
 			items = <
 				["at0001"] = <[SNOMED-CT::134395001]>
