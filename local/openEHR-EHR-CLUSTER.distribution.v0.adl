@@ -1,9 +1,8 @@
-archetype (adl_version=1.4; uid=996ef63d-efeb-323c-a4c9-96a720e735a5)
+﻿archetype (adl_version=1.4; uid=d06666ef-9c25-34f4-b203-7d42fe4ddd01)
 	openEHR-EHR-CLUSTER.distribution.v0
 
 concept
-	[at0000]
-
+	[at0000]	-- Distribution
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -25,37 +24,40 @@ language
 			>
 		>
 	>
-
 description
 	original_author = <
-		["date"] = <"2008-07-07">
 		["name"] = <"D B Hutchinson">
 		["organisation"] = <"NHS CFH UK">
+		["date"] = <"2008-07-07">
 	>
-	lifecycle_state = <"in_development">
-	other_contributors = <"Ian McNicoll, freshEHR Clinical Informatics, UK","Heather Leslie, Atomica Informatics, Australia">
 	details = <
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"For å registrere opplysninger om målgruppe for en distribusjon eller melding. Dette kan være til en navngitt gruppe, kategori, til enkeltpersoner eller organisasjoner.">
-			keywords = <"kopi til","melding","notifikasjon","beskjed","notat","distribusjon","e-post","e-mail","fax","brev">
-			copyright = <"© openEHR Foundation">
 			use = <"Brukes normalt i sammenheng med en serviceforespørsel, rapport eller annen kommunikasjon som er ment å bli distribuert til andre parter. Kan brukes som en del av en forespørsel eller annen instruks om å angi andre parter som bør inkluderes eller 'med kopi \"i responsen, og for å indikere hvilke andre partefir som faktisk ble notifisert i responsen.">
-		>
-		["sl"] = <
-			language = <[ISO_639-1::sl]>
-			purpose = <"Skupina naslovnikov, seznam prejemnikov">
-			keywords = <"cc","distribution list","prejemnik","naslovnik","skupina naslovnikov","seznam prejemnikov">
+			keywords = <"kopi til", "melding", "notifikasjon", "beskjed", "notat", "distribusjon", "e-post", "e-mail", "fax", "brev">
+			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record the details of the target of a distribution or notification. This may be to a named group or category or to individual persons or organisations.">
-			keywords = <"cc","notification">
-			copyright = <"© openEHR Foundation">
 			use = <"Normally used within the context of a service request, report or other communication which is intended to be distributed to other parties. May be used as part of a request or other instruction to specify other parties who should be included or 'cced' in the response, and to indicate which other parties were actually notified in the response.">
+			keywords = <"cc", "notification">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"Skupina naslovnikov, seznam prejemnikov">
+			use = <"">
+			keywords = <"cc", "distribution list", "prejemnik", "naslovnik", "skupina naslovnikov", "seznam prejemnikov">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Ian McNicoll, freshEHR Clinical Informatics, UK", "Heather Leslie, Atomica Informatics, Australia">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -106,6 +108,8 @@ definition
 			}
 		}
 	}
+
+
 
 ontology
 	term_definitions = <
