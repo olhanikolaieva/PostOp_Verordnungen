@@ -1,25 +1,27 @@
-archetype (adl_version=1.4; uid=ebaa4e3a-b279-46d0-bf3c-be7a75b0b54f)
+﻿archetype (adl_version=1.4; uid=ebaa4e3a-b279-46d0-bf3c-be7a75b0b54f)
 	openEHR-EHR-CLUSTER.anatomical_location_tooth.v0
 
 concept
-	[at0000]
-
+	[at0000]	-- Anatomical location tooth
 language
 	original_language = <[ISO_639-1::ja]>
-
 description
 	original_author = <
 		["name"] = <"">
 	>
-	lifecycle_state = <"in_development">
 	details = <
 		["ja"] = <
 			language = <[ISO_639-1::ja]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
 			copyright = <"© Shinji Kobayashi
 Takahiro Nakahara
 © openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -32,158 +34,170 @@ Takahiro Nakahara
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- Anatomical location tooth
+	CLUSTER[at0000] matches {	-- Anatomical location tooth
 		items cardinality matches {1..*; unordered} matches {
-			CLUSTER[at0001] occurrences matches {0..*} matches {    -- Tooth site
+			CLUSTER[at0001] occurrences matches {0..*} matches {	-- Tooth site
 				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Tooth name
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Tooth name
 						value matches {
 							DV_TEXT matches {*}
 						}
 					}
-					CLUSTER[at0003] occurrences matches {0..*} matches {    -- Tooth number
+					CLUSTER[at0003] occurrences matches {0..*} matches {	-- Tooth number
 						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0004] occurrences matches {0..1} matches {    -- Upper
+							ELEMENT[at0004] occurrences matches {0..1} matches {	-- Upper
 								value matches {
-									DV_QUANTITY matches {*}
+									C_DV_QUANTITY <
+									>
 								}
 							}
-							ELEMENT[at0005] occurrences matches {0..1} matches {    -- Lower
+							ELEMENT[at0005] occurrences matches {0..1} matches {	-- Lower
 								value matches {
-									DV_QUANTITY matches {*}
+									C_DV_QUANTITY <
+									>
 								}
 							}
-							ELEMENT[at0006] occurrences matches {0..1} matches {    -- Right
+							ELEMENT[at0006] occurrences matches {0..1} matches {	-- Right
 								value matches {
-									DV_QUANTITY matches {*}
+									C_DV_QUANTITY <
+									>
 								}
 							}
-							ELEMENT[at0007] occurrences matches {0..1} matches {    -- Left
+							ELEMENT[at0007] occurrences matches {0..1} matches {	-- Left
 								value matches {
-									DV_QUANTITY matches {*}
+									C_DV_QUANTITY <
+									>
 								}
 							}
 						}
 					}
-					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Site name
+					ELEMENT[at0008] occurrences matches {0..1} matches {	-- Site name
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0025,    -- Cusp
-									at0026,    -- Fissure
-									at0027]    -- Root
+									at0025, 	-- Cusp
+									at0026, 	-- Fissure
+									at0027]	-- Root
 								}
 							}
 						}
 					}
 				}
 			}
-			ELEMENT[at0009] occurrences matches {0..1} matches {    -- Aspect
+			ELEMENT[at0009] occurrences matches {0..1} matches {	-- Aspect
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0028,    -- Buccal
-							at0029,    -- Lingual
-							at0030,    -- Medial
-							at0031,    -- Distal
-							at0032,    -- Occlusal
-							at0033,    -- Gingival
-							at0034,    -- Coronal
-							at0035]    -- Cervical
+							at0028, 	-- Buccal
+							at0029, 	-- Lingual
+							at0030, 	-- Medial
+							at0031, 	-- Distal
+							at0032, 	-- Occlusal
+							at0033, 	-- Gingival
+							at0034, 	-- Coronal
+							at0035]	-- Cervical
 						}
 					}
 				}
 			}
-			ELEMENT[at0010] occurrences matches {0..1} matches {    -- Tissue
+			ELEMENT[at0010] occurrences matches {0..1} matches {	-- Tissue
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0036,    -- Enamel
-							at0037,    -- Dentin
-							at0038,    -- Cement
-							at0039,    -- Pulp
-							at0040]    -- Periodontal membrane
+							at0036, 	-- Enamel
+							at0037, 	-- Dentin
+							at0038, 	-- Cement
+							at0039, 	-- Pulp
+							at0040]	-- Periodontal membrane
 						}
 					}
 				}
 			}
-			CLUSTER[at0011] occurrences matches {0..*} matches {    -- Axis
+			CLUSTER[at0011] occurrences matches {0..*} matches {	-- Axis
 				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0012] occurrences matches {0..1} matches {    -- Normal status
+					ELEMENT[at0012] occurrences matches {0..1} matches {	-- Normal status
 						value matches {
-							DV_BOOLEAN matches {*}
+							DV_BOOLEAN matches {
+								value matches {True, False}
+							}
 						}
 					}
-					ELEMENT[at0013] occurrences matches {0..1} matches {    -- Absolute measurement
+					ELEMENT[at0013] occurrences matches {0..1} matches {	-- Absolute measurement
 						value matches {
-							DV_QUANTITY matches {*}
+							C_DV_QUANTITY <
+							>
 						}
 					}
-					ELEMENT[at0014] occurrences matches {0..1} matches {    -- Relative dangle
+					ELEMENT[at0014] occurrences matches {0..1} matches {	-- Relative dangle
 						value matches {
-							DV_QUANTITY matches {*}
+							C_DV_QUANTITY <
+							>
 						}
 					}
 				}
 			}
-			CLUSTER[at0015] occurrences matches {0..*} matches {    -- Location
+			CLUSTER[at0015] occurrences matches {0..*} matches {	-- Location
 				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0016] occurrences matches {0..1} matches {    -- Normal status
+					ELEMENT[at0016] occurrences matches {0..1} matches {	-- Normal status
 						value matches {
-							DV_BOOLEAN matches {*}
+							DV_BOOLEAN matches {
+								value matches {True, False}
+							}
 						}
 					}
-					CLUSTER[at0017] occurrences matches {0..*} matches {    -- Absolute measurement
+					CLUSTER[at0017] occurrences matches {0..*} matches {	-- Absolute measurement
 						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0018] occurrences matches {0..1} matches {    -- Landmark
+							ELEMENT[at0018] occurrences matches {0..1} matches {	-- Landmark
 								value matches {
 									DV_CODED_TEXT matches {
 										defining_code matches {
 											[local::
-											at0041,    -- N point(nasion)
-											at0042]    -- S point(Sella turccia)
+											at0041, 	-- N point(nasion)
+											at0042]	-- S point(Sella turccia)
 										}
 									}
 								}
 							}
-							ELEMENT[at0019] occurrences matches {0..1} matches {    -- XYZ
+							ELEMENT[at0019] occurrences matches {0..1} matches {	-- XYZ
 								value matches {
-									DV_QUANTITY matches {*}
+									C_DV_QUANTITY <
+									>
 								}
 							}
 						}
 					}
-					CLUSTER[at0020] occurrences matches {0..*} matches {    -- Relative location
+					CLUSTER[at0020] occurrences matches {0..*} matches {	-- Relative location
 						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0021] occurrences matches {0..1} matches {    -- Landmark
+							ELEMENT[at0021] occurrences matches {0..1} matches {	-- Landmark
 								value matches {
 									DV_TEXT matches {*}
 								}
 							}
-							ELEMENT[at0022] occurrences matches {0..1} matches {    -- Direction
+							ELEMENT[at0022] occurrences matches {0..1} matches {	-- Direction
 								value matches {
 									DV_CODED_TEXT matches {
 										defining_code matches {
 											[local::
-											at0043,    -- Baccal
-											at0044,    -- Lingual
-											at0045,    -- Medial
-											at0046,    -- Distal
-											at0047,    -- Cervical
-											at0048]    -- Incisal
+											at0043, 	-- Baccal
+											at0044, 	-- Lingual
+											at0045, 	-- Medial
+											at0046, 	-- Distal
+											at0047, 	-- Cervical
+											at0048]	-- Incisal
 										}
 									}
 								}
 							}
-							ELEMENT[at0023] occurrences matches {0..1} matches {    -- Distance from landmark
+							ELEMENT[at0023] occurrences matches {0..1} matches {	-- Distance from landmark
 								value matches {
-									DV_QUANTITY matches {*}
+									C_DV_QUANTITY <
+									>
 								}
 							}
-							ELEMENT[at0024] occurrences matches {0..1} matches {    -- Description
+							ELEMENT[at0024] occurrences matches {0..1} matches {	-- Description
 								value matches {
 									DV_TEXT matches {*}
 								}
@@ -194,6 +208,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
