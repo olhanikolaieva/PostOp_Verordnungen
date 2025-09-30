@@ -1,34 +1,34 @@
-archetype (adl_version=1.4; uid=fb26ff5b-b5a8-420d-b058-c351ec68ecd6)
+﻿archetype (adl_version=1.4; uid=fb26ff5b-b5a8-420d-b058-c351ec68ecd6)
 	openEHR-EHR-CLUSTER.drug_resistance_profile.v0
 
 concept
-	[at0000]
-
+	[at0000]	-- Drug resistance profile
 language
 	original_language = <[ISO_639-1::en]>
-
 description
 	original_author = <
-		["date"] = <"2022-10-26">
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Atomica Informatics">
 		["email"] = <"heather.leslie@atomicainformatics.com">
+		["date"] = <"2022-10-26">
 	>
-	lifecycle_state = <"in_development">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record information about the reduction in the effectiveness of a medication in treating a condition.">
-			keywords = <"medication","drug">
-			copyright = <"© openEHR Foundation">
 			use = <"Use to record information about the reduction in the effectiveness of a medication in treating a condition.
 
 This archetype has been designed for nesting within:
 - the 'Analyte result detail' SLOT within the CLUSTER.laboratory_test_analyte archetype to record the drug resistance profile of a single microorganism;
 - the 'Status' SLOT in the EVALUATION.problem_diagnosis archetype, to record the drug resistance profile of a diagnosed condition; or
 - other clinically relevant archetypes.">
+			keywords = <"medication", "drug">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -96,6 +96,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
