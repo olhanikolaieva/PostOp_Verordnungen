@@ -1,9 +1,8 @@
-archetype (adl_version=1.4; uid=fd575057-c5ab-4de3-814e-b54f891324b4)
+﻿archetype (adl_version=1.4; uid=fd575057-c5ab-4de3-814e-b54f891324b4)
 	openEHR-EHR-CLUSTER.cobb_angle.v0
 
 concept
-	[at0000]
-
+	[at0000]	-- Cobb angle
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -16,39 +15,41 @@ language
 			>
 		>
 	>
-
 description
 	original_author = <
-		["date"] = <"2022-10-03">
 		["name"] = <"John Tore Valand">
 		["organisation"] = <"Helse Vest IKT AS">
 		["email"] = <"john.tore.valand@helse-vest-ikt.no">
+		["date"] = <"2022-10-03">
 	>
-	lifecycle_state = <"in_development">
 	details = <
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"For å registrere en Cobbvinkel.">
-			keywords = <"skoliose, lordose, kyfose", ...>
 			use = <"Brukes for å registrere en Cobbvinkel.
 
 Denne arketypen er utformet for å bli nøstet i SLOT'et \"Ytterligere detaljer\" i arketypen CLUSTER.imaging_exam_spine, CLUSTER.imaging_exam-cervical_spine, CLUSTER.imaging_exam-thoracic_spine, CLUSTER.imaging_exam-lumbal_spine, i SLOT'et \"Strukturerte funn\" i OBSERVATION.imaging_exam_result (Bildediagnostisk svar) eller i andre relevante Bildediagnostisk svar-arketyper, men kan også brukes innen andre ENTRY- og CLUSTER-arketyper der det er klinisk passende.
 
 Detaljer om start- og sluttpunkter for målingen, kroppsstilling, støtteutstyr eller metode som brukes for å måle vinkelen, skal registreres i OBSERVATION.imaging_exam eller i andre relevante ENTRY-arketyper.
 ">
+			keywords = <"skoliose, lordose, kyfose", ...>
+			misuse = <"">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record a Cobb angle.">
-			keywords = <"scoliosis, lordosis, kyphosis", ...>
-			copyright = <"© openEHR Foundation">
 			use = <"Use to record a Cobb angle.
 
 This archetype is designed to be nested within the 'Findings' SLOT in the CLUSTER.imaging_exam_spine, CLUSTER.imaging_exam-cervical_spine, CLUSTER.imaging_exam-thoracic_spine, CLUSTER.imaging_exam-lumbal_spine, the 'Structured imaging findings' SLOT in the OBSERVATION.imaging_exam_result or within other relevant CLUSTER.imaging_exam archetypes, but can also be used within other ENTRY or CLUSTER archetypes, where clinically appropriate. 
 
 Details about start and end points of the measurement, body postion, supporting devices or method used to measure the angle is to be recorded in OBSERVATION.imaging_exam or in other relevant ENTRY archetypes.">
+			keywords = <"scoliosis, lordosis, kyphosis", ...>
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -105,6 +106,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
