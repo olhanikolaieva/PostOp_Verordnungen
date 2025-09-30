@@ -1,27 +1,21 @@
-archetype (adl_version=1.4; uid=4048235c-0619-42f9-bf53-4fed49d29679)
+﻿archetype (adl_version=1.4; uid=4048235c-0619-42f9-bf53-4fed49d29679)
 	openEHR-EHR-CLUSTER.bleeding_findings.v0
 
 concept
-	[at0000]
-
+	[at0000]	-- Examination of bleeding
 language
 	original_language = <[ISO_639-1::en]>
-
 description
 	original_author = <
-		["date"] = <"2025-07-14">
 		["name"] = <"Keisha Barwise">
 		["organisation"] = <"openEHR Foundation">
 		["email"] = <"keisha.barwise@openehr.org">
+		["date"] = <"2025-07-14">
 	>
-	lifecycle_state = <"in_development">
-	other_contributors = <"Khin Aung, THRIVE Consultancy, Jamaica","Nicola Ewen Hall, openEHR Clinical Fellow 2025, Jamaica","Heather Leslie, openEHR Foundation, CCIO">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record the observed characteristics of bleeding during a physical examination.">
-			keywords = <"Bleeding, hemorrhage, rectal bleeding, physical examination, clinical finding, observation, blood loss.", ...>
-			copyright = <"© openEHR Foundation">
 			use = <"Use to record the observed findings related to bleeding during a physical examination, such as in an inspection or palpation of the rectum or other relevant anatomical sites.
 
 This archetype has been specifically designed to be used in the ‘Examination detail’ SLOT within the OBSERVATION.exam archetype, but can also be used within other ENTRY or CLUSTER archetypes where clinically appropriate, such as CLUSTER.exam-rectum.v0 or CLUSTER.exam-vagina.v0.
@@ -31,11 +25,15 @@ Interpretation of the bleeding findings, such as ‘Bright red bleeding likely f
 The CLUSTER.exclusion_exam archetype can be nested within the ‘Examination not done’ SLOT to optionally record explicit details about the examination not being performed.
 
 Use to incorporate narrative descriptions of bleeding within existing or legacy clinical systems into an archetyped format, using the ‘Clinical description’ data element.">
+			keywords = <"Bleeding, hemorrhage, rectal bleeding, physical examination, clinical finding, observation, blood loss.", ...>
 			misuse = <"Not to be used for recording clinical history, such as a patient's reported episodes of bleeding – use OBSERVATION.story or CLUSTER.symptom_sign for this purpose.
 
 Not to be used for quantifying blood loss over time or measuring blood as a type of fluid output – use OBSERVATION.fluid_output-blood.v0 for that purpose, especially when the focus is on the volume or rate of blood loss (e.g. postoperative drainage, menstrual flow, or hemorrhage in critical care).">
+			copyright = <"© openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Khin Aung, THRIVE Consultancy, Jamaica", "Nicola Ewen Hall, openEHR Clinical Fellow 2025, Jamaica", "Heather Leslie, openEHR Foundation, CCIO">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -114,6 +112,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
