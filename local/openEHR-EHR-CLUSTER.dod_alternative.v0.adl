@@ -1,9 +1,8 @@
-archetype (adl_version=1.4; uid=c0157204-2b4e-4f54-a9ec-4bfcdd3e41ab)
+﻿archetype (adl_version=1.4; uid=c0157204-2b4e-4f54-a9ec-4bfcdd3e41ab)
 	openEHR-EHR-CLUSTER.dod_alternative.v0
 
 concept
-	[at0000]
-
+	[at0000]	-- Date of death alternative
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -16,35 +15,37 @@ language
 			>
 		>
 	>
-
 description
 	original_author = <
-		["date"] = <"2022-04-12">
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Atomica Informatics">
 		["email"] = <"heather.leslie@atomicainformatics.com">
+		["date"] = <"2022-04-12">
 	>
-	lifecycle_state = <"in_development">
 	details = <
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"For å registrere detaljer om mulig dødsfalltidspunkt.">
-			keywords = <"tidspunkt","død">
-			copyright = <"© openEHR Foundation">
 			use = <"For å registrere detaljer om mulig dødsfalltidspunkt, inkludert begrunnelse og informasjonskilde.
 
 Denne arketypen er laget for å registrere informasjon om et mulig dødsfalltidspunkt, hvor individet kan ha flere enn ett dødsfalltidspunkt registrert i pasientjournalen.">
+			keywords = <"tidspunkt", "død">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record details about a single possible date/time of death.">
-			keywords = <"time of death","death">
-			copyright = <"© openEHR Foundation">
 			use = <"To record details about a single possible date of death, including the rationale and source of information.
 
 This archetype has been designed to capture information about a possible date of death, where the individual may have more than one recorded within the health system.">
+			keywords = <"time of death", "death">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -81,6 +82,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
