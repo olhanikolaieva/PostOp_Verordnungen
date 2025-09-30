@@ -1,11 +1,10 @@
-archetype (adl_version=1.4; uid=724ee63a-64a5-4c56-bb35-5b1fb965c4c6)
+﻿archetype (adl_version=1.4; uid=724ee63a-64a5-4c56-bb35-5b1fb965c4c6)
 	openEHR-EHR-CLUSTER.exam-optic_disc.v0
-specialize
+specialise
 	openEHR-EHR-CLUSTER.exam.v2
 
 concept
-	[at0000.1]
-
+	[at0000.1]	-- Examination of the optic disc
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -57,21 +56,17 @@ language
 			>
 		>
 	>
-
 description
 	original_author = <
-		["date"] = <"2015-06-23">
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Atomica Informatics">
 		["email"] = <"heather.leslie@atomicainformatics.com">
+		["date"] = <"2015-06-23">
 	>
-	lifecycle_state = <"in_development">
-	other_contributors = <"Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)","Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)","SB Bhattacharyya, Sudisa Consultancy Services, India","Lisbeth Dahlhaug, Helse Midt - Norge IT, Norway","Shahla Foozonkhah, Iran ministry of health and education, Iran","Hildegard Franke, freshEHR Clinical Informatics Ltd., United Kingdom (openEHR Editor)","Mikkel Gaup Grønmo, FSE, Helse Nord, Norway (Nasjonal IKT redaktør)","Ingrid Heitmann, Oslo universitetssykehus HF, Norway","Hilde Hollås, DIPS ASA, Norway","Evelyn Hovenga, EJSH Consulting, Australia","Lars Ivar Mehlum, Helse Bergen HF, Norway","Sabine Leh, Haukeland University Hospital, Department of Pathology, Norway","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Ian McNicoll, freshEHR Clinical Informatics, United Kingdom","Lars Morgan Karlsen, DIPS ASA, Norway","Bjørn Næss, DIPS ASA, Norway","Andrej Orel, Marand d.o.o., Slovenia","Vladimir Pizzo, Hospital Sírio Libanês, Brazil","Jussara Rotzsch, UNB, Brazil","Anoop Shah, University College London, United Kingdom","Line Silsand, Universitetssykehuset i Nord-Norge, Norway","Norwegian Review Summary, Nasjonal IKT HF, Norway","Nyree Taylor, Ocean Informatics, Australia (openEHR Editor)","Rowan Thomas, St. Vincent's Hospital Melbourne, Australia","Jon Tysdahl, Furst medlab AS, Norway","John Tore Valand, Helse Bergen, Norway (openEHR Editor)">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"*To record a narrative description, structured details and clinical interpretation of the findings observed during the physical examination of the optic disc of an eye. (en)">
-			copyright = <"© openEHR Foundation">
 			use = <"*Use to record a narrative description, structured details and clinical interpretation of the findings observed during the physical examination of the optic disc of an eye.
 
 This archetype has been specifically designed to be used in the 'Examination detail' SLOT within the CLUSTER.exam-eye or OBSERVATION.exam archetypes, but can also be used within other ENTRY or CLUSTER archetypes, where clinically appropriate. 
@@ -84,12 +79,11 @@ The CLUSTER.exclusion_exam archetype can be nested within the 'Examination not d
 
 Use to incorporate the narrative descriptions of clinical findings within existing or legacy clinical systems into an archetyped format, using the 'Clinical Description' data element. (en)">
 			misuse = <"*Not to be used for recording the clinical history - use specific OBSERVATION and CLUSTER archetypes. For example OBSERVATION.story and CLUSTER.symptom_sign.(en)">
+			copyright = <"© openEHR Foundation">
 		>
 		["sv"] = <
 			language = <[ISO_639-1::sv]>
 			purpose = <"*To record a narrative description, structured details and clinical interpretation of the findings observed during the physical examination of the optic disc of an eye. (en)">
-			keywords = <"fynd, undersökningsfynd, fysisk undersökning, u.a., utan anmärkning", ...>
-			copyright = <"© openEHR Foundation">
 			use = <"*Use to record a narrative description, structured details and clinical interpretation of the findings observed during the physical examination of the optic disc of an eye.
 
 This archetype has been specifically designed to be used in the 'Examination detail' SLOT within the CLUSTER.exam-eye or OBSERVATION.exam archetypes, but can also be used within other ENTRY or CLUSTER archetypes, where clinically appropriate. 
@@ -101,14 +95,15 @@ Use to provide a framework in which CLUSTER archetypes can be nested in the 'Exa
 The CLUSTER.exclusion_exam archetype can be nested within the 'Examination not done' SLOT to optionally record explicit details about the examination not being performed.
 
 Use to incorporate the narrative descriptions of clinical findings within existing or legacy clinical systems into an archetyped format, using the 'Clinical Description' data element. (en)">
+			keywords = <"fynd, undersökningsfynd, fysisk undersökning, u.a., utan anmärkning", ...>
 			misuse = <"*Not to be used for recording the clinical history - use specific OBSERVATION and CLUSTER archetypes. For example OBSERVATION.story and CLUSTER.symptom_sign.
 
  (en)">
+			copyright = <"© openEHR Foundation">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"*To record a narrative description, structured details and clinical interpretation of the findings observed during the physical examination of the optic disc of an eye. (en)">
-			copyright = <"© openEHR Foundation">
 			use = <"*Use to record a narrative description, structured details and clinical interpretation of the findings observed during the physical examination of the optic disc of an eye.
 
 This archetype has been specifically designed to be used in the 'Examination detail' SLOT within the CLUSTER.exam-eye or OBSERVATION.exam archetypes, but can also be used within other ENTRY or CLUSTER archetypes, where clinically appropriate. 
@@ -123,11 +118,11 @@ Use to incorporate the narrative descriptions of clinical findings within existi
 			misuse = <"*Not to be used for recording the clinical history - use specific OBSERVATION and CLUSTER archetypes. For example OBSERVATION.story and CLUSTER.symptom_sign.
 
  (en)">
+			copyright = <"© openEHR Foundation">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
 			purpose = <"*To record a narrative description, structured details and clinical interpretation of the findings observed during the physical examination of the optic disc of an eye. (en)">
-			copyright = <"© openEHR Foundation">
 			use = <"*Use to record a narrative description, structured details and clinical interpretation of the findings observed during the physical examination of the optic disc of an eye.
 
 This archetype has been specifically designed to be used in the 'Examination detail' SLOT within the CLUSTER.exam-eye or OBSERVATION.exam archetypes, but can also be used within other ENTRY or CLUSTER archetypes, where clinically appropriate. 
@@ -142,6 +137,7 @@ Use to incorporate the narrative descriptions of clinical findings within existi
 			misuse = <"*Not to be used for recording the clinical history - use specific OBSERVATION and CLUSTER archetypes. For example OBSERVATION.story and CLUSTER.symptom_sign.
 
  (en)">
+			copyright = <"© openEHR Foundation">
 		>
 		["el"] = <
 			language = <[ISO_639-1::el]>
@@ -164,7 +160,6 @@ Not to be used for recording the results of an imaging examination - use the CLU
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record a narrative description, structured details and clinical interpretation of the findings observed during the physical examination of the optic disc of an eye.">
-			copyright = <"© openEHR Foundation">
 			use = <"Use to record a narrative description, structured details and clinical interpretation of the findings observed during the physical examination of the optic disc of an eye.
 
 This archetype has been specifically designed to be used in the 'Examination detail' SLOT within the CLUSTER.exam-eye or OBSERVATION.exam archetypes, but can also be used within other ENTRY or CLUSTER archetypes, where clinically appropriate. 
@@ -177,6 +172,7 @@ The CLUSTER.exclusion_exam archetype can be nested within the 'Examination not d
 
 Use to incorporate the narrative descriptions of clinical findings within existing or legacy clinical systems into an archetyped format, using the 'Clinical Description' data element.">
 			misuse = <"Not to be used for recording the clinical history - use specific OBSERVATION and CLUSTER archetypes. For example OBSERVATION.story and CLUSTER.symptom_sign.">
+			copyright = <"© openEHR Foundation">
 		>
 		["es"] = <
 			language = <[ISO_639-1::es]>
@@ -197,6 +193,8 @@ Use to incorporate the narrative descriptions of clinical findings within existi
 Not to be used for recording the results of an imaging examination - use the CLUSTER.imaging_exam family of archetypes for this purpose.(en)">
 		>
 	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)", "SB Bhattacharyya, Sudisa Consultancy Services, India", "Lisbeth Dahlhaug, Helse Midt - Norge IT, Norway", "Shahla Foozonkhah, Iran ministry of health and education, Iran", "Hildegard Franke, freshEHR Clinical Informatics Ltd., United Kingdom (openEHR Editor)", "Mikkel Gaup Grønmo, FSE, Helse Nord, Norway (Nasjonal IKT redaktør)", "Ingrid Heitmann, Oslo universitetssykehus HF, Norway", "Hilde Hollås, DIPS ASA, Norway", "Evelyn Hovenga, EJSH Consulting, Australia", "Lars Ivar Mehlum, Helse Bergen HF, Norway", "Sabine Leh, Haukeland University Hospital, Department of Pathology, Norway", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom", "Lars Morgan Karlsen, DIPS ASA, Norway", "Bjørn Næss, DIPS ASA, Norway", "Andrej Orel, Marand d.o.o., Slovenia", "Vladimir Pizzo, Hospital Sírio Libanês, Brazil", "Jussara Rotzsch, UNB, Brazil", "Anoop Shah, University College London, United Kingdom", "Line Silsand, Universitetssykehuset i Nord-Norge, Norway", "Norwegian Review Summary, Nasjonal IKT HF, Norway", "Nyree Taylor, Ocean Informatics, Australia (openEHR Editor)", "Rowan Thomas, St. Vincent's Hospital Melbourne, Australia", "Jon Tysdahl, Furst medlab AS, Norway", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -262,6 +260,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	terminologies_available = <"SNOMED-CT", ...>
@@ -722,7 +721,7 @@ ontology
 			>
 		>
 	>
-	term_binding = <
+	term_bindings = <
 		["SNOMED-CT"] = <
 			items = <
 				["at0.1"] = <[SNOMED-CT::721899000]>
