@@ -1,9 +1,8 @@
-archetype (adl_version=1.4; uid=5eff3f42-58ee-428c-9545-3a5ffa5f94ba)
+﻿archetype (adl_version=1.4; uid=5eff3f42-58ee-428c-9545-3a5ffa5f94ba)
 	openEHR-EHR-CLUSTER.change.v0
 
 concept
-	[at0000]
-
+	[at0000]	-- Readiness for change
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -21,34 +20,39 @@ language
 			>
 		>
 	>
-
 description
 	original_author = <
-		["date"] = <"2008-01-01">
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"2008-01-01">
 	>
-	lifecycle_state = <"in_development">
-	other_contributors = <"Shahla Foozonkhah, Ocean Informatics, Australia","Heather Leslie, Ocean Informatics, Australia (Editor)","Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (Editor)">
 	details = <
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"For å registrere detaljer om motivasjon for å endre en atferd.">
-			keywords = <"forandring","endring","motivasjon">
-			copyright = <"© openEHR Foundation">
-		>
-		["en"] = <
-			language = <[ISO_639-1::en]>
-			purpose = <"To record details about readiness for change of a behaviour.">
+			use = <"">
+			keywords = <"forandring", "endring", "motivasjon">
+			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
 			purpose = <"لتسجيل المعلومات حول تغيير ما">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record details about readiness for change of a behaviour.">
+			use = <"">
+			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Shahla Foozonkhah, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (Editor)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -62,64 +66,65 @@ description
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- Readiness for change
+	CLUSTER[at0000] matches {	-- Readiness for change
 		items cardinality matches {1..*; unordered} matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Readiness to change
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Readiness to change
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0012,    -- Not ready (Precontemplation)
-							at0013,    -- Unsure (Contemplation)
-							at0014,    -- Ready (Preparation)
-							at0015,    -- Action
-							at0016]    -- Maintenance
+							at0012, 	-- Not ready (Precontemplation)
+							at0013, 	-- Unsure (Contemplation)
+							at0014, 	-- Ready (Preparation)
+							at0015, 	-- Action
+							at0016]	-- Maintenance
 						}
 					}
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Reasons
+			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Reasons
 				value matches {
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Triggers
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Triggers
 				value matches {
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Positive aspects of current behaviour
+			ELEMENT[at0005] occurrences matches {0..1} matches {	-- Positive aspects of current behaviour
 				value matches {
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0006] occurrences matches {0..1} matches {    -- Negative aspects of current behaviour
+			ELEMENT[at0006] occurrences matches {0..1} matches {	-- Negative aspects of current behaviour
 				value matches {
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0008] occurrences matches {0..1} matches {    -- Positive aspects of change
+			ELEMENT[at0008] occurrences matches {0..1} matches {	-- Positive aspects of change
 				value matches {
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0009] occurrences matches {0..1} matches {    -- Negative aspects of change
+			ELEMENT[at0009] occurrences matches {0..1} matches {	-- Negative aspects of change
 				value matches {
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0010] occurrences matches {0..1} matches {    -- Barriers to change
+			ELEMENT[at0010] occurrences matches {0..1} matches {	-- Barriers to change
 				value matches {
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0011] occurrences matches {0..1} matches {    -- Comment
+			ELEMENT[at0011] occurrences matches {0..1} matches {	-- Comment
 				value matches {
 					DV_TEXT matches {*}
 				}
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
