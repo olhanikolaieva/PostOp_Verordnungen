@@ -1,0 +1,771 @@
+﻿archetype (adl_version=1.4; uid=3fc0011f-c5d6-4903-b40b-edab69de9893)
+	openEHR-EHR-OBSERVATION.bss_r.v0
+
+concept
+	[at0000]	-- Birth Satisfaction Scale-Revised (BSS-R)
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Timo de Vries">
+				["organisation"] = <"Better">
+				["email"] = <"Timo.de-Vries@better.care">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Johannes Schmidt">
+		["organisation"] = <"Better">
+		["email"] = <"johannes.schmidt@better.care">
+		["date"] = <"2025-02-11">
+	>
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"*To record the results of the Birth Satisfaction Scale-Revised (BSS-R) (en)">
+			use = <"*To assess birth experience. (en)">
+			misuse = <"">
+			copyright = <"© colinmartin.bssr@proton.me; C.HollinsMartin@napier.ac.uk, openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the results of the Birth Satisfaction Scale-Revised (BSS-R)">
+			use = <"To assess birth experience.">
+			misuse = <"">
+			copyright = <"© colinmartin.bssr@proton.me; C.HollinsMartin@napier.ac.uk, openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Hollins-Martin, C.J., Martin, C. (2014). Development and psychometric properties of the Birth Satisfaction Scale-Revised (BSS-R). Midwifery.
+30: 610-619.
+Link to reference: www.sciencedirect.com/science/article/abs/pii/S0266613813002982
+
+GERMAN translation: Hartmann C et al. \"\"Das ICHOM-Standardset für… Geburtsh Frauenheilk 2022; 82 | © 2022. The author(s).\"">
+		["current_contact"] = <"Johannes Schmidt, Better">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"A1D17549698CBE6D6A7C30F0DCAFC22D">
+		["build_uid"] = <"9a8d4d2c-357b-4d49-8544-f3c1ce722fdf">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Birth Satisfaction Scale-Revised (BSS-R)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- 1. Unscathed childbirth
+										value matches {
+											4.0|[local::at0049],
+											3.0|[local::at0050],
+											2.0|[local::at0051],
+											1.0|[local::at0052],
+											0.0|[local::at0053]
+										}
+									}
+									ELEMENT[at0010] occurrences matches {0..1} matches {    -- 2. Long labour
+										value matches {
+											0.0|[local::at0085],
+											1.0|[local::at0086],
+											2.0|[local::at0087],
+											3.0|[local::at0088],
+											4.0|[local::at0089]
+										}
+									}
+									ELEMENT[at0016] occurrences matches {0..1} matches {    -- 3. Feel in charge of labour
+										value matches {
+											4.0|[local::at0070],
+											3.0|[local::at0071],
+											2.0|[local::at0072],
+											1.0|[local::at0073],
+											0.0|[local::at0074]
+										}
+									}
+									ELEMENT[at0017] occurrences matches {0..1} matches {    -- 4. Anxiety
+										value matches {
+											0.0|[local::at0090],
+											1.0|[local::at0091],
+											2.0|[local::at0092],
+											3.0|[local::at0093],
+											4.0|[local::at0094]
+										}
+									}
+									ELEMENT[at0018] occurrences matches {0..1} matches {    -- 5. Sufficient support
+										value matches {
+											4.0|[local::at0065],
+											3.0|[local::at0066],
+											2.0|[local::at0067],
+											1.0|[local::at0068],
+											0.0|[local::at0069]
+										}
+									}
+									ELEMENT[at0019] occurrences matches {0..1} matches {    -- 6. Staff Communication
+										value matches {
+											4.0|[local::at0060],
+											3.0|[local::at0061],
+											2.0|[local::at0062],
+											1.0|[local::at0063],
+											0.0|[local::at0064]
+										}
+									}
+									ELEMENT[at0020] occurrences matches {0..1} matches {    -- 7. Distressing experience
+										value matches {
+											0.0|[local::at0095],
+											1.0|[local::at0096],
+											2.0|[local::at0097],
+											3.0|[local::at0098],
+											4.0|[local::at0099]
+										}
+									}
+									ELEMENT[at0021] occurrences matches {0..1} matches {    -- 8. Loss of control
+										value matches {
+											0.0|[local::at0100],
+											1.0|[local::at0101],
+											2.0|[local::at0102],
+											3.0|[local::at0103],
+											4.0|[local::at0104]
+										}
+									}
+									ELEMENT[at0022] occurrences matches {0..1} matches {    -- 9. Not distressed
+										value matches {
+											4.0|[local::at0075],
+											3.0|[local::at0076],
+											2.0|[local::at0077],
+											1.0|[local::at0078],
+											0.0|[local::at0079]
+										}
+									}
+									ELEMENT[at0023] occurrences matches {0..1} matches {    -- 10. Room cleanliness
+										value matches {
+											4.0|[local::at0080],
+											3.0|[local::at0081],
+											2.0|[local::at0082],
+											1.0|[local::at0083],
+											0.0|[local::at0084]
+										}
+									}
+									ELEMENT[at0045] occurrences matches {0..1} matches {    -- Stress experienced during labour
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..16|}
+											}
+										}
+									}
+									ELEMENT[at0046] occurrences matches {0..1} matches {    -- Women’s personal attributes
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..8|}
+											}
+										}
+									}
+									ELEMENT[at0047] occurrences matches {0..1} matches {    -- Quality of care provision
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..16|}
+											}
+										}
+									}
+									ELEMENT[at0048] occurrences matches {0..1} matches {    -- Total score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..40|}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0039] matches {*}    -- Item tree
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Birth Satisfaction Scale-Revised (BSS-R)">
+					description = <"The BSS-R is the lead international clinical measure of birth satisfaction and is used to assess women’s perceptions of care provided and experiences of care provided during labour and childbirth.">
+					comment = <"The BSS-R is recommended as the ‘method of choice’ for assessing birth experience by the International Consortium for Health Outcome Measurement (ICHOM).">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"1. Unscathed childbirth">
+					description = <"1. I came through childbirth virtually unscathed.
+">
+				>
+				["at0010"] = <
+					text = <"2. Long labour">
+					description = <"2. I thought my labour was excessively long.">
+				>
+				["at0016"] = <
+					text = <"3. Feel in charge of labour">
+					description = <"3. The delivery room staff encouraged me to make decisions about how I wanted my birth to progress.">
+				>
+				["at0017"] = <
+					text = <"4. Anxiety">
+					description = <"4. I felt very anxious during my labour and birth.">
+				>
+				["at0039"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0018"] = <
+					text = <"5. Sufficient support">
+					description = <"5. I felt well supported by staff during my labour and birth.">
+				>
+				["at0019"] = <
+					text = <"6. Staff Communication">
+					description = <"6. The staff communicated well with me during labour.">
+				>
+				["at0020"] = <
+					text = <"7. Distressing experience">
+					description = <"7. I found giving birth a distressing experience.">
+				>
+				["at0021"] = <
+					text = <"8. Loss of control">
+					description = <"8. I felt out of control during my birth experience.">
+				>
+				["at0022"] = <
+					text = <"9. Not distressed">
+					description = <"9. I was not distressed at all during labour.">
+				>
+				["at0023"] = <
+					text = <"10. Room cleanliness">
+					description = <"10. The delivery room was clean and hygienic.">
+				>
+				["at0045"] = <
+					text = <"Stress experienced during labour">
+					description = <"Obstetric injuries, long labour, distress experienced during labour
+(Items: 1, 2, 7, 9)">
+				>
+				["at0046"] = <
+					text = <"Women’s personal attributes">
+					description = <"Ability to cope during labour, feeling in control
+(Items: 4, 8)">
+				>
+				["at0047"] = <
+					text = <"Quality of care provision">
+					description = <"Birth environment, sufficient support, relationships with health care professionals
+(Items: 3, 5, 6, 10)">
+				>
+				["at0048"] = <
+					text = <"Total score">
+					description = <"The total sum of each component parameter.">
+				>
+				["at0049"] = <
+					text = <"Strongly Agree">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Agree">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"Neither">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"Disagree">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"Strongly Disagree">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"Strongly Agree">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"Agree">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"Neither">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"Disagree">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"Strongly Disagree">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"Strongly Agree">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"Agree">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"Neither">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"Disagree">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"Strongly Disagree">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Strongly Agree">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"Agree">
+					description = <"">
+				>
+				["at0072"] = <
+					text = <"Neither">
+					description = <"">
+				>
+				["at0073"] = <
+					text = <"Disagree">
+					description = <"">
+				>
+				["at0074"] = <
+					text = <"Strongly Disagree">
+					description = <"">
+				>
+				["at0075"] = <
+					text = <"Strongly Agree">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"Agree">
+					description = <"">
+				>
+				["at0077"] = <
+					text = <"Neither">
+					description = <"">
+				>
+				["at0078"] = <
+					text = <"Disagree">
+					description = <"">
+				>
+				["at0079"] = <
+					text = <"Strongly Disagree">
+					description = <"">
+				>
+				["at0080"] = <
+					text = <"Strongly Agree">
+					description = <"">
+				>
+				["at0081"] = <
+					text = <"Agree">
+					description = <"">
+				>
+				["at0082"] = <
+					text = <"Neither">
+					description = <"">
+				>
+				["at0083"] = <
+					text = <"Disagree">
+					description = <"">
+				>
+				["at0084"] = <
+					text = <"Strongly Disagree">
+					description = <"">
+				>
+				["at0085"] = <
+					text = <"Strongly Agree">
+					description = <"">
+				>
+				["at0086"] = <
+					text = <"Agree">
+					description = <"">
+				>
+				["at0087"] = <
+					text = <"Neither">
+					description = <"">
+				>
+				["at0088"] = <
+					text = <"Disagree">
+					description = <"">
+				>
+				["at0089"] = <
+					text = <"Strongly Disagree">
+					description = <"">
+				>
+				["at0090"] = <
+					text = <"Strongly Agree">
+					description = <"">
+				>
+				["at0091"] = <
+					text = <"Agree">
+					description = <"">
+				>
+				["at0092"] = <
+					text = <"Neither">
+					description = <"">
+				>
+				["at0093"] = <
+					text = <"Disagree">
+					description = <"">
+				>
+				["at0094"] = <
+					text = <"Strongly Disagree">
+					description = <"">
+				>
+				["at0095"] = <
+					text = <"Strongly Agree">
+					description = <"">
+				>
+				["at0096"] = <
+					text = <"Agree">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"Neither">
+					description = <"">
+				>
+				["at0098"] = <
+					text = <"Disagree">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"Strongly Disagree">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"Strongly Agree">
+					description = <"">
+				>
+				["at0101"] = <
+					text = <"Agree">
+					description = <"">
+				>
+				["at0102"] = <
+					text = <"Neither">
+					description = <"">
+				>
+				["at0103"] = <
+					text = <"Disagree">
+					description = <"">
+				>
+				["at0104"] = <
+					text = <"Strongly Disagree">
+					description = <"">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Birth Satisfaction Scale-Revised (BSS-R)">
+					description = <"*The BSS-R is the lead international clinical measure of birth satisfaction and is used to assess women’s perceptions of care provided and experiences of care provided during labour and childbirth. (en)">
+					comment = <"*The BSS-R is recommended as the ‘method of choice’ for assessing birth experience by the International Consortium for Health Outcome Measurement (ICHOM). (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"1. Unbeschadete Entbindung">
+					description = <"1. Ich erlebte die Geburt ohne körperliche oder psychische Komplikationen.">
+				>
+				["at0010"] = <
+					text = <"2. Lange Geburt">
+					description = <"2. Ich dachte, die Geburt dauert unendlich lang.">
+				>
+				["at0016"] = <
+					text = <"3. Selbstbestimmte Entscheidungen">
+					description = <"3. Ich wurde von Hebammen und Ärzt:innen im Geburtsraum (Kreißsaal) ermutigt, Entscheidungen im Geburtsverlauf zu treffen.">
+				>
+				["at0017"] = <
+					text = <"4. Angst">
+					description = <"4. Ich hatte während der Geburt Angst.">
+				>
+				["at0039"] = <
+					text = <"*Item tree (en)">
+					description = <"@ internal @">
+				>
+				["at0018"] = <
+					text = <"5. Ausreichende Unterstützung">
+					description = <"5. Ich fühlte mich während der Geburt vom medizinischen Personal gut unterstützt.">
+				>
+				["at0019"] = <
+					text = <"6. Kommunikation vom Personal">
+					description = <"6. Während der Geburt hat das medizinische Personal gut mit mir kommuniziert.">
+				>
+				["at0020"] = <
+					text = <"7. Beunruhigende Erfahrung">
+					description = <"7. Ich habe die Geburt als eine beunruhigende Erfahrung erlebt">
+				>
+				["at0021"] = <
+					text = <"8. Kontrollverlust">
+					description = <"8. Ich hatte während der Geburt das Gefühl von Kontrollverlust.">
+				>
+				["at0022"] = <
+					text = <"9. Eigene Beunruhigung">
+					description = <"9. Ich war während der Geburt überhaupt nicht beunruhigt.">
+				>
+				["at0023"] = <
+					text = <"10. Sauberkeit Geburtsraum">
+					description = <"10. Der Geburtsraum (Kreißsaal) war sauber und hygienisch.">
+				>
+				["at0045"] = <
+					text = <"Stress während der Geburt">
+					description = <"Unbeschadete Entbindung, lange Geburt, Stress während der Geburt
+(Items: 1, 2, 7, 9)">
+				>
+				["at0046"] = <
+					text = <"Persönlicher Umgang">
+					description = <"Fähigkeit, die Geburt zu bewältigen, Gefühl der Kontrolle
+(Items: 4, 8)">
+				>
+				["at0047"] = <
+					text = <"Qualität der Versorgung">
+					description = <"Umfeld, ausreichende Unterstützung, Beziehungen zu den Gesundheitsfachkräften
+(Items: 3, 5, 6, 10)">
+				>
+				["at0048"] = <
+					text = <"Gesamtscore">
+					description = <"*The total sum of each component parameter. (en)">
+				>
+				["at0049"] = <
+					text = <"Ich stimme voll und ganz zu">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Ich stimme zu">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"Ich stimme weder zu, noch widerspreche ich">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"Ich stimme nicht zu">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"Ich stimme überhaupt nicht zu">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"Ich stimme voll und ganz zu">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"Ich stimme zu">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"Ich stimme weder zu, noch widerspreche ich">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"Ich stimme nicht zu">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"Ich stimme überhaupt nicht zu">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"Ich stimme voll und ganz zu">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"Ich stimme zu">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"Ich stimme weder zu, noch widerspreche ich">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"Ich stimme nicht zu">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"Ich stimme überhaupt nicht zu">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Ich stimme voll und ganz zu">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"Ich stimme zu">
+					description = <"">
+				>
+				["at0072"] = <
+					text = <"Ich stimme weder zu, noch widerspreche ich">
+					description = <"">
+				>
+				["at0073"] = <
+					text = <"Ich stimme nicht zu">
+					description = <"">
+				>
+				["at0074"] = <
+					text = <"Ich stimme überhaupt nicht zu">
+					description = <"">
+				>
+				["at0075"] = <
+					text = <"Ich stimme voll und ganz zu">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"Ich stimme zu">
+					description = <"">
+				>
+				["at0077"] = <
+					text = <"Ich stimme weder zu, noch widerspreche ich">
+					description = <"">
+				>
+				["at0078"] = <
+					text = <"Ich stimme nicht zu">
+					description = <"">
+				>
+				["at0079"] = <
+					text = <"Ich stimme überhaupt nicht zu">
+					description = <"">
+				>
+				["at0080"] = <
+					text = <"Ich stimme voll und ganz zu">
+					description = <"">
+				>
+				["at0081"] = <
+					text = <"Ich stimme zu">
+					description = <"">
+				>
+				["at0082"] = <
+					text = <"Ich stimme weder zu, noch widerspreche ich">
+					description = <"">
+				>
+				["at0083"] = <
+					text = <"Ich stimme nicht zu">
+					description = <"">
+				>
+				["at0084"] = <
+					text = <"Ich stimme überhaupt nicht zu">
+					description = <"">
+				>
+				["at0085"] = <
+					text = <"Ich stimme voll und ganz zu">
+					description = <"">
+				>
+				["at0086"] = <
+					text = <"Ich stimme zu">
+					description = <"">
+				>
+				["at0087"] = <
+					text = <"Ich stimme weder zu, noch widerspreche ich">
+					description = <"">
+				>
+				["at0088"] = <
+					text = <"Ich stimme nicht zu">
+					description = <"">
+				>
+				["at0089"] = <
+					text = <"Ich stimme überhaupt nicht zu">
+					description = <"">
+				>
+				["at0090"] = <
+					text = <"Ich stimme voll und ganz zu">
+					description = <"">
+				>
+				["at0091"] = <
+					text = <"Ich stimme zu">
+					description = <"">
+				>
+				["at0092"] = <
+					text = <"Ich stimme weder zu, noch widerspreche ich">
+					description = <"">
+				>
+				["at0093"] = <
+					text = <"Ich stimme nicht zu">
+					description = <"">
+				>
+				["at0094"] = <
+					text = <"Ich stimme überhaupt nicht zu">
+					description = <"">
+				>
+				["at0095"] = <
+					text = <"Ich stimme voll und ganz zu">
+					description = <"">
+				>
+				["at0096"] = <
+					text = <"Ich stimme zu">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"Ich stimme weder zu, noch widerspreche ich">
+					description = <"">
+				>
+				["at0098"] = <
+					text = <"Ich stimme nicht zu">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"Ich stimme überhaupt nicht zu">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"Ich stimme voll und ganz zu">
+					description = <"">
+				>
+				["at0101"] = <
+					text = <"Ich stimme zu">
+					description = <"">
+				>
+				["at0102"] = <
+					text = <"Ich stimme weder zu, noch widerspreche ich">
+					description = <"">
+				>
+				["at0103"] = <
+					text = <"Ich stimme nicht zu">
+					description = <"">
+				>
+				["at0104"] = <
+					text = <"Ich stimme überhaupt nicht zu">
+					description = <"">
+				>
+			>
+		>
+	>
