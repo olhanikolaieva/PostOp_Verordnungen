@@ -1,9 +1,8 @@
-archetype (adl_version=1.4; uid=e43f7e6f-62a8-4d94-b6ce-df1c60fc96b6)
+﻿archetype (adl_version=1.4; uid=e43f7e6f-62a8-4d94-b6ce-df1c60fc96b6)
 	openEHR-EHR-CLUSTER.ctcae.v1
 
 concept
-	[at0000]
-
+	[at0000]	-- Common Terminology Criteria for Adverse Events (CTCAE)
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -39,64 +38,63 @@ language
 			>
 		>
 	>
-
 description
 	original_author = <
-		["date"] = <"2021-01-11">
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Atomica Informatics">
 		["email"] = <"heather.leslie@atomicainformatics.com">
+		["date"] = <"2021-01-11">
 	>
-	lifecycle_state = <"published">
-	other_contributors = <"Marit Alice Venheim, Helse Vest IKT, Norway (Nasjonal IKT redaktør)","Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)","Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)","Aleocidio Balzanelo, UHG Brasil, Brazil","Ivar Berge, Oslo Universitetssykehus, Norway","SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India","Adam Bouras, CDC/OGHA, United States","Randi Brendberg, Helse Nord RHF, Norway","Laila Bruun, Oslo universitetssykehus HF, Norway","Ian Bull, ACT Health, Australia","giovanni delussu, crs4, Italy","Rosane Gotardo, Systema Ltda., Brazil","Elin Hallan Naderi, OUS, Norway","Amanda Herbrand, University Hospital Basel, Switzerland","Joost Holslag, Nedap, Netherlands","Evelyn Hovenga, EJSH Consulting, Australia","Mikkel Johan Gaup Grønmo, Regional forvaltning EPJ, Helse Nord, Norway (Nasjonal IKT redaktør)","Shinji Kobayashi, NPO openEHR Japan, Japan (openEHR Editor)","Kanika Kuwelker, Helse Vest IKT, Norway (Nasjonal IKT redaktør)","Jörgen Kuylenstierna, eWeave AB, Sweden","Tomi Laptoš, Marand, Slovenia","Liv Laugen, Oslo universitetssykehus, Norway (Nasjonal IKT redaktør)","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Nina Louise Jebsen, Haukeland Universitetssykehus, Norway","Hanne Marte Bårholm, Helse Vest IKT, Norway (Nasjonal IKT redaktør)","Cecilie Moe, Oslo Universitessykehus, Norway","Bjoern Naess, DIPS ASA, Norway","Arunakiry Natarajan, medondo, Germany","Terje Nordberg, Helse Bergen, Norway","Mikael Nyström, Cambio Healthcare Systems AB, Sweden","Bjørn Næss, DIPS ASA, Norway","Helge Pettersen, Helse Bergen, Norway","Ragnhild Schultz, OUS, Norway","Natalia Strauch, Medizinische Hochschule Hannover, Germany","Norwegian Review Summary, Norwegian Public Hospitals, Norway","Erik Sundvall, Sweden","Venkatesh Thoppae, Dedalus, United Kingdom","Anders Thurin, VGR, Sweden","John Tore Valand, Helse Bergen, Norway (openEHR Editor)","Ina Wille, Helse-Vest RHF, Norway","Neill Yeoman, The Christie NHS Foundation Trust, United Kingdom">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"Bereitstellung einer Rahmenstruktur für die Erfassung jeglicher ungünstiger und unbeabsichtigter Anzeichen, Symptome oder Krankheiten temporal unter Verwendung der CTCAE-Terminologie.">
-			keywords = <"CTCAE","Anzeichen","Symptom","Krankheit","unerwünscht","Ereignis">
 			use = <"Verwenden Sie diesen Archetyp zur Bereitstellung einer Rahmenstruktur für die Darstellung einer CTCAE-Klassifikation unter Verwendung von Begriffen aus geeigneten MedDRA-Terminologiehierarchien.
 
 Dieser Archetyp ist dafür vorgesehen, im Kontext des Archetyps EVALUATION.problem_diagnosis (SLOT \"Spezifische Angaben\") oder CLUSTER.symptom_sign oder anderer klinisch relevanter Archetypen verwendet zu werden.">
+			keywords = <"CTCAE", "Anzeichen", "Symptom", "Krankheit", "unerwünscht", "Ereignis">
 			misuse = <"Nicht zur Darstellung von Details über unerwünschte Ereignisse außerhalb der CTCAE-Klassifikation verwenden.">
 		>
 		["pt-pt"] = <
 			language = <[ISO_639-1::pt-pt]>
 			purpose = <"Providenciar uma estrutura para registar a classificação CTCAE.">
-			keywords = <"ctcea","sinal","sintoma","doença","adverso","evento">
 			use = <"Usar para providenciar uma estrutura para registo da classificação CTCAE, utilizando termos da hierarquia de terminologia MedDRA apropriada.
 
 É pretendido que este arquétipo seja colocado na SLOT 'Specific details' do arquétipo EVALUATION.problem_diagnosis ou do CLUSTER.symptom_sign, ou noutros arquétipos clinicamente relevantes.">
+			keywords = <"ctcea", "sinal", "sintoma", "doença", "adverso", "evento">
 			misuse = <"Não usar para registar detalhes de eventos adversos fora da classificação CTCAE.">
 		>
 		["sv"] = <
 			language = <[ISO_639-1::sv]>
 			purpose = <"Ett ramverk för att klassificera med med hjälp av CTCAE.">
-			keywords = <"CTCAE","biverkan","biverkningar","tecken","symptom","sjukdom","cytostatika">
 			use = <"Används som ett ramverk för att CTCAE-klassificera med med hjälp av termer från lämpliga hierarkier i MedDRA-terminologin.
 
 Denna arketyp är avsedd att infogas under fältet \"Specifika detaljer\" i antingen EVALUATION.problem_diagnosis eller CLUSTER.symptom_sign arketyperna, eller andra kliniskt relevanta arketyper.">
+			keywords = <"CTCAE", "biverkan", "biverkningar", "tecken", "symptom", "sjukdom", "cytostatika">
 			misuse = <"Får inte användas för att registrera detaljer om biverkningar på annat sätt än med CTCAE-klassificeringen.">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"Et rammeverk for å registrere CTCAE-klassifisering.">
-			keywords = <"ctcae","sykdomstegn","symptom","sykdom","utilsiktet","ugunstig","uønsket","hendelse","bivirkning","toksisitet","toxicity","legemiddel","kreft","malignitet","kjemoterapi","stråling","proton","CTC","senskade">
 			use = <"Bruk som et rammeverk for å registrere CTCAE-klassifisering, ved å bruke koder fra hierarkiet av termer fra MedDRA-terminologien.
 
 Denne arketypen er tiltenkt å nøstes i CLUSTER.symptom_sign (Symptom/Sykdomstegn) eller EVALUATION.problem_diagnosis (Problem/diagnose) eller en annen klinisk relevant arketype.">
+			keywords = <"ctcae", "sykdomstegn", "symptom", "sykdom", "utilsiktet", "ugunstig", "uønsket", "hendelse", "bivirkning", "toksisitet", "toxicity", "legemiddel", "kreft", "malignitet", "kjemoterapi", "stråling", "proton", "CTC", "senskade">
 			misuse = <"Skal ikke brukes for å registrere uønskede hendelser utenom å klassifisere CTCAE.">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To provide a framework for recording a CTCAE classification.">
-			keywords = <"ctcae","sign","symptom","disease","adverse","event">
-			copyright = <"© openEHR Foundation">
 			use = <"Use to provide a framework for recording a CTCAE classification, using terms from appropriate MedDRA terminology hierarchies.
 
 This archetype is intended to be nested in the 'Specific details' SLOT within either the EVALUATION.problem_diagnosis or CLUSTER.symptom_sign archetypes, or other clinically relevant archetypes.">
+			keywords = <"ctcae", "sign", "symptom", "disease", "adverse", "event">
 			misuse = <"Not to be used for recording details about adverse events outside of the CTCAE classification.">
+			copyright = <"© openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"published">
+	other_contributors = <"Marit Alice Venheim, Helse Vest IKT, Norway (Nasjonal IKT redaktør)", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Aleocidio Balzanelo, UHG Brasil, Brazil", "Ivar Berge, Oslo Universitetssykehus, Norway", "SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India", "Adam Bouras, CDC/OGHA, United States", "Randi Brendberg, Helse Nord RHF, Norway", "Laila Bruun, Oslo universitetssykehus HF, Norway", "Ian Bull, ACT Health, Australia", "giovanni delussu, crs4, Italy", "Rosane Gotardo, Systema Ltda., Brazil", "Elin Hallan Naderi, OUS, Norway", "Amanda Herbrand, University Hospital Basel, Switzerland", "Joost Holslag, Nedap, Netherlands", "Evelyn Hovenga, EJSH Consulting, Australia", "Mikkel Johan Gaup Grønmo, Regional forvaltning EPJ, Helse Nord, Norway (Nasjonal IKT redaktør)", "Shinji Kobayashi, NPO openEHR Japan, Japan (openEHR Editor)", "Kanika Kuwelker, Helse Vest IKT, Norway (Nasjonal IKT redaktør)", "Jörgen Kuylenstierna, eWeave AB, Sweden", "Tomi Laptoš, Marand, Slovenia", "Liv Laugen, Oslo universitetssykehus, Norway (Nasjonal IKT redaktør)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Nina Louise Jebsen, Haukeland Universitetssykehus, Norway", "Hanne Marte Bårholm, Helse Vest IKT, Norway (Nasjonal IKT redaktør)", "Cecilie Moe, Oslo Universitessykehus, Norway", "Bjoern Naess, DIPS ASA, Norway", "Arunakiry Natarajan, medondo, Germany", "Terje Nordberg, Helse Bergen, Norway", "Mikael Nyström, Cambio Healthcare Systems AB, Sweden", "Bjørn Næss, DIPS ASA, Norway", "Helge Pettersen, Helse Bergen, Norway", "Ragnhild Schultz, OUS, Norway", "Natalia Strauch, Medizinische Hochschule Hannover, Germany", "Norwegian Review Summary, Norwegian Public Hospitals, Norway", "Erik Sundvall, Sweden", "Venkatesh Thoppae, Dedalus, United Kingdom", "Anders Thurin, VGR, Sweden", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Ina Wille, Helse-Vest RHF, Norway", "Neill Yeoman, The Christie NHS Foundation Trust, United Kingdom">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -144,6 +142,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
