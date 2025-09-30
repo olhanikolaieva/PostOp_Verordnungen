@@ -1,9 +1,8 @@
-archetype (adl_version=1.4; uid=4ce52f85-f342-47bc-8969-14cc64e506d7)
+﻿archetype (adl_version=1.4; uid=4ce52f85-f342-47bc-8969-14cc64e506d7)
 	openEHR-EHR-CLUSTER.anatomical_pathology_exam_jm.v0
 
 concept
-	[at0000]
-
+	[at0000]	-- Anatomical pathology examination
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -23,54 +22,53 @@ language
 			>
 		>
 	>
-
 description
 	original_author = <
-		["date"] = <"2016-11-23">
 		["name"] = <"Silje Ljosland Bakke">
 		["organisation"] = <"Nasjonal IKT HF">
 		["email"] = <"silje.ljosland.bakke@nasjonalikt.no">
+		["date"] = <"2016-11-23">
 	>
-	lifecycle_state = <"in_development">
-	other_contributors = <"Vebjørn Arntzen, Oslo universitetssykehus, Norway","Silje Ljosland Bakke, Nasjonal IKT HF, Norway (Nasjonal IKT redaktør)","Kristin Eik, Kreftregisteret, Norway","Anca Heyd, DIPS ASA, Norway","Sabine Leh, Helse-Bergen, Norway (Nasjonal IKT redaktør)","Heather Leslie, Ocean Informatics, Australia (Nasjonal IKT redaktør)","Jan-Arne Ludvigsen, DIPS ASA, Norway","Ole Martin Sand, DIPS ASA, Norway","Ian McNicoll, Ocean Informatics, United Kingdom (Nasjonal IKT redaktør)","Bjørn Næss, DIPS ASA, Norway","Sveinung Sørbye, UNN HF, Norway","John Tore Valand, Helse Bergen HF, Norway","Torleif Trydal, Fürst AS, Norway","Johan Bjerner, Fürst AS, Norway","Nils Petter Tveranger, Helse Vest IKT AS, Norway">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"*To record the findings observed during the histopathological or cytopathological examination of organs, tissues, cells, or body fluids. (en)">
-			keywords = <"Histopathologie, Zytologie, Pathologie, anatomische Pathologie, intraoperative Untersuchung, mikroskopische Untersuchung, makroskopische Untersuchung, Immunhistochemie", ...>
-			copyright = <"*© openEHR Foundation (en)">
 			use = <"*Use to record the findings observed during the histopathological or cytopathological examination of organs, tissues, cells, or body fluids.
 
 This archetype is designed specifically to be used in the \"Test result\" SLOT within the OBSERVATION.laboratory_test_result archetype, but may also be used within other ENTRY class archetypes where appropriate. (en)">
+			keywords = <"Histopathologie, Zytologie, Pathologie, anatomische Pathologie, intraoperative Untersuchung, mikroskopische Untersuchung, makroskopische Untersuchung, Immunhistochemie", ...>
 			misuse = <"*Not to be used for reporting other types of laboratory test results, for example biochemistry or haematology.
 
 Not to be used to record a complete autopsy report, although individual tests performed on specimens collected during an autopsy may be represented using this archetype. (en)">
+			copyright = <"*© openEHR Foundation (en)">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"*To record the findings observed during the histopathological or cytopathological examination of organs, tissues, cells, or body fluids. (en)">
-			keywords = <"histopatologi, anatomisk patologi, cytologi", ...>
-			copyright = <"*© openEHR Foundation (en)">
 			use = <"*Use to record the findings observed during the histopathological or cytopathological examination of organs, tissues, cells, or body fluids.
 
 This archetype is designed specifically to be used in the \"Test result\" SLOT within the OBSERVATION.laboratory_test_result archetype, but may also be used within other ENTRY class archetypes where appropriate. (en)">
+			keywords = <"histopatologi, anatomisk patologi, cytologi", ...>
 			misuse = <"*Not to be used for reporting other types of laboratory test results, for example biochemistry or haematology.
 
 Not to be used to record a complete autopsy report, although individual tests performed on specimens collected during an autopsy may be represented using this archetype. (en)">
+			copyright = <"*© openEHR Foundation (en)">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record the findings observed during the histopathological or cytopathological examination of organs, tissues, cells, or body fluids.">
-			keywords = <"histopathology, cytology, pathology", ...>
-			copyright = <"© openEHR Foundation">
 			use = <"Use to record the findings observed during the histopathological or cytopathological examination of organs, tissues, cells, or body fluids.
 
 This archetype is designed specifically to be used in the \"Test result\" SLOT within the OBSERVATION.laboratory_test_result archetype, but may also be used within other ENTRY class archetypes where appropriate.">
+			keywords = <"histopathology, cytology, pathology", ...>
 			misuse = <"Not to be used for reporting other types of laboratory test results, for example biochemistry or haematology.
 
 Not to be used to record a complete autopsy report, although individual tests performed on specimens collected during an autopsy may be represented using this archetype.">
+			copyright = <"© openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Vebjørn Arntzen, Oslo universitetssykehus, Norway", "Silje Ljosland Bakke, Nasjonal IKT HF, Norway (Nasjonal IKT redaktør)", "Kristin Eik, Kreftregisteret, Norway", "Anca Heyd, DIPS ASA, Norway", "Sabine Leh, Helse-Bergen, Norway (Nasjonal IKT redaktør)", "Heather Leslie, Ocean Informatics, Australia (Nasjonal IKT redaktør)", "Jan-Arne Ludvigsen, DIPS ASA, Norway", "Ole Martin Sand, DIPS ASA, Norway", "Ian McNicoll, Ocean Informatics, United Kingdom (Nasjonal IKT redaktør)", "Bjørn Næss, DIPS ASA, Norway", "Sveinung Sørbye, UNN HF, Norway", "John Tore Valand, Helse Bergen HF, Norway", "Torleif Trydal, Fürst AS, Norway", "Johan Bjerner, Fürst AS, Norway", "Nils Petter Tveranger, Helse Vest IKT AS, Norway">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"Nasjonal IKT">
@@ -119,6 +117,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
