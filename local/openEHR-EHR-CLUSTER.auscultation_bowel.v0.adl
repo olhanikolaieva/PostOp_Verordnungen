@@ -1,27 +1,21 @@
-archetype (adl_version=1.4; uid=233b47e5-1295-4157-96b0-fe50f4055def)
+﻿archetype (adl_version=1.4; uid=233b47e5-1295-4157-96b0-fe50f4055def)
 	openEHR-EHR-CLUSTER.auscultation_bowel.v0
 
 concept
-	[at0000]
-
+	[at0000]	-- Auscultation of bowel sounds
 language
 	original_language = <[ISO_639-1::en]>
-
 description
 	original_author = <
-		["date"] = <"2025-05-14">
 		["name"] = <"Keisha Barwise">
 		["organisation"] = <"openEHR Foundation">
 		["email"] = <"keisha.barwise@openehr.org">
+		["date"] = <"2025-05-14">
 	>
-	lifecycle_state = <"in_development">
-	other_contributors = <"Heather Leslie","CIO","openEHR Foundation","heather.leslie@openehr.org">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record a narrative description and clinical interpretation of the findings observed during the auscultation of bowel sounds in the abdomen or chest.">
-			keywords = <"bowel sounds, auscultation", ...>
-			copyright = <"© openEHR Foundation">
 			use = <"Use to record a description and clinical interpretation of findings observed during auscultation of bowel sounds in the abdomen or, in rare and abnormal circumstances, in the chest.
  
 This archetype has been specifically designed to be used in the 'Examination detail' SLOT within the CLUSTER.exam-abdomen, CLUSTER.exam-lung or OBSERVATION.exam archetypes, but can also be used within other ENTRY or CLUSTER archetypes, where clinically appropriate.
@@ -29,9 +23,13 @@ This archetype has been specifically designed to be used in the 'Examination det
 The CLUSTER.exclusion_exam archetype can be nested within the 'Examination not done' SLOT to optionally record explicit details about the examination not being performed.
 
 Use to incorporate the narrative descriptions of clinical findings within existing or legacy clinical systems into an archetyped format, using the 'Clinical Description' data element.">
+			keywords = <"bowel sounds, auscultation", ...>
 			misuse = <"Not to be used for recording the clinical history - use specific OBSERVATION and CLUSTER archetypes. For example OBSERVATION.story and CLUSTER.symptom_sign.">
+			copyright = <"© openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Heather Leslie", "CIO", "openEHR Foundation", "heather.leslie@openehr.org">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -117,6 +115,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
