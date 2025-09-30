@@ -1,9 +1,8 @@
-archetype (adl_version=1.4; uid=17fdaefa-0ec3-48d0-8b07-97d6ee841168)
+﻿archetype (adl_version=1.4; uid=17fdaefa-0ec3-48d0-8b07-97d6ee841168)
 	openEHR-EHR-CLUSTER.boston_bowel_preparation_scale.v1
 
 concept
-	[at0000]
-
+	[at0000]	-- Boston Bowel Preparation Scale
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -16,22 +15,17 @@ language
 			>
 		>
 	>
-
 description
 	original_author = <
-		["date"] = <"2020-10-26">
 		["name"] = <"Bjørn Næss">
 		["organisation"] = <"DIPS AS">
 		["email"] = <"bna@dips.no">
+		["date"] = <"2020-10-26">
 	>
-	lifecycle_state = <"published">
-	other_contributors = <"Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)","Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)","SB Bhattacharyya, Sudisa Consultancy Services, India","Kåre Flø, DIPS ASA, Norway","Mikkel Johan Gaup Grønmo, Forvaltningssenter EPJ, Helse-Nord, Norway (openEHR Editor)","Geir Hoff, Sykehuset Telemark HF, Norway","Evelyn Hovenga, EJSH Consulting, Australia","Morten Hørthe <mho@dips.no>","Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)","Heather Leslie, Atomica Informatics, Australia","Bjørn Næss, DIPS ASA, Norway","Frode Stenvik, Helse Sør-Øst, Norway","Norwegian Review Summary, Nasjonal IKT HF, Norway","Pencho Tonchev, Medical University- Pleven, Bulgaria","John Tore Valand, Helse Bergen, Norway (openEHR Editor)","Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)">
 	details = <
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"Brukes for å registrere tarmtømmingsgrad under koloskopi.">
-			keywords = <"koloskopi, klyster, bbps, tarmtømming", ...>
-			copyright = <"© Nasjonal IKT HF, openEHR Foundation">
 			use = <"Brukes for å registrere tarmtømmingsgrad under koloskopi.
 
 Null-verdien \"Not applicable\" kan benyttes av programvaren dersom bruker har behov for å markere for at det ikke er mulig å oppgi en verdi i ett eller flere av de ulike dataelementene. Det kan skyldes for eksempel at et segment av kolon er fjernet kirurgisk, eller av årsaker som ikke er knyttet til forberedelsene til undersøkelsen. Dette kan for eksempel være tekniske utfordringer, eller ustabil pasient.
@@ -39,18 +33,24 @@ Null-verdien \"Not applicable\" kan benyttes av programvaren dersom bruker har b
 
 
 ">
+			keywords = <"koloskopi, klyster, bbps, tarmtømming", ...>
+			misuse = <"">
+			copyright = <"© Nasjonal IKT HF, openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record the quality of bowel cleanliness during colonoscopy.">
-			keywords = <"colonoscopy, enema, bbps", ...>
-			copyright = <"© Nasjonal IKT HF, openEHR Foundation">
 			use = <"Use to record the quality of bowel cleanliness during colonoscopy.
 
 If a segment of the colon is surgically absent or not seen for reasons unrelated to bowel preparation,
 such as technical difficulties or patient instability, use a null flavour for 'Not applicable' for each relevant data element.">
+			keywords = <"colonoscopy, enema, bbps", ...>
+			misuse = <"">
+			copyright = <"© Nasjonal IKT HF, openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"published">
+	other_contributors = <"Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "SB Bhattacharyya, Sudisa Consultancy Services, India", "Kåre Flø, DIPS ASA, Norway", "Mikkel Johan Gaup Grønmo, Forvaltningssenter EPJ, Helse-Nord, Norway (openEHR Editor)", "Geir Hoff, Sykehuset Telemark HF, Norway", "Evelyn Hovenga, EJSH Consulting, Australia", "Morten Hørthe <mho@dips.no>", "Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia", "Bjørn Næss, DIPS ASA, Norway", "Frode Stenvik, Helse Sør-Øst, Norway", "Norwegian Review Summary, Nasjonal IKT HF, Norway", "Pencho Tonchev, Medical University- Pleven, Bulgaria", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -106,6 +106,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	terminologies_available = <"SNOMED-CT", ...>
@@ -191,7 +192,7 @@ ontology
 			>
 		>
 	>
-	term_binding = <
+	term_bindings = <
 		["SNOMED-CT"] = <
 			items = <
 				["at0000"] = <[SNOMED-CT::722818007]>
