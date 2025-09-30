@@ -1,9 +1,8 @@
-archetype (adl_version=1.4; uid=dd46f157-d547-4ec7-a7a4-92406071524c)
+﻿archetype (adl_version=1.4; uid=dd46f157-d547-4ec7-a7a4-92406071524c)
 	openEHR-EHR-CLUSTER.bioreagent.v0
 
 concept
-	[at0000]
-
+	[at0000]	-- Bioreagent
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -55,22 +54,17 @@ language
 			>
 		>
 	>
-
 description
 	original_author = <
-		["date"] = <"2022-01-28">
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Atomica Informatics">
 		["email"] = <"heather.leslie@atomicainformatics.com">
+		["date"] = <"2022-01-28">
 	>
-	lifecycle_state = <"in_development">
-	other_contributors = <"Peter Fedorcsak, University of Oslo, Norway (openEHR Editor)","Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)","Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"Zur Aufzeichnung der Details zu einem Bioreagenz oder Laborverbrauchsmaterial, das im Rahmen eines diagnostischen oder therapeutischen Verfahrens im Gesundheitswesen verwendet wird.">
-			keywords = <"Chemikalie","Biochemikalie","Reagenz","Biosubstanz","Substanz","Laborprodukt","Material","Medium">
-			copyright = <"© openEHR Foundation">
 			use = <"Zur Erfassung der Details eines Bioreagenz oder Laborverbrauchsmaterials, das im Rahmen eines diagnostischen oder therapeutischen Verfahrens im Gesundheitswesen verwendet wird.
 
 Dieser Archetyp wurde für die breite Wiederverwendung in anderen Archetypen entwickelt, die die Verwendung eines bestimmten Bioreagenz identifizieren müssen. Beispielsweise kann er im SLOT „Verfahrensdetails“ des Archetyps ACTION.procedure bei Verfahren der assistierten Reproduktion verschachtelt werden, wie z. B.:
@@ -78,15 +72,15 @@ Dieser Archetyp wurde für die breite Wiederverwendung in anderen Archetypen ent
 - Assistierte Aktivierung von Eizellen;
 - Kryokonservierung und Auftauen von Zellen oder Embryonen; und
 - Befruchtung durch intrazytoplasmatische Spermieninjektion (ICSI).">
+			keywords = <"Chemikalie", "Biochemikalie", "Reagenz", "Biosubstanz", "Substanz", "Laborprodukt", "Material", "Medium">
 			misuse = <"Nicht zur Erfassung von Daten über Arzneimittel mit direkter pharmakologischer, metabolischer oder immunologischer Wirkung. Beispiel: Ein verschreibungspflichtiges Arzneimittel sollte mit dem Archetyp „INSTRUCTION.medication_order“ erfasst werden, der sich auf Wirkstoffe, Dosierung usw. konzentriert.
 
 Nicht zur Erfassung von Daten über medizinische Geräte, Instrumente oder Ausrüstung, die bei diagnostischen oder therapeutischen Verfahren eingesetzt werden, verwenden Sie hierfür den entsprechenden Archetyp.">
+			copyright = <"© openEHR Foundation">
 		>
 		["sv"] = <
 			language = <[ISO_639-1::sv]>
 			purpose = <"*To record the details about a bioreagent or laboratory consumable used as part of a diagnostic or therapeutic procedure in healthcare. (en)">
-			keywords = <"*chemical (en)","*biochemical (en)","*reagent (en)","*biosubstance (en)","*substance (en)","*laboratory (en)","*product (en)","*material (en)","*medium (en)">
-			copyright = <"© openEHR Foundation">
 			use = <"*Use to record the details about a bioreagent or laboratory consumable used as part of a diagnostic or therapeutic procedure in healthcare.
 
 This archetype has been designed for broad reuse within other archetypes that need to identify the use of a specific bioreagent. For example, to nest within the 'Procedure detail' SLOT in the ACTION.procedure archetype in assisted reproduction treatment procedures such as: 
@@ -94,15 +88,31 @@ This archetype has been designed for broad reuse within other archetypes that ne
 - assisted oocyte activation; 
 - cryopreservation and thawing of cells or embryos; and
 - fertilisation by intracytoplasmic sperm injection (ICSI). (en)">
+			keywords = <"*chemical (en)", "*biochemical (en)", "*reagent (en)", "*biosubstance (en)", "*substance (en)", "*laboratory (en)", "*product (en)", "*material (en)", "*medium (en)">
 			misuse = <"*Not to be used to record data about medicinal products that exert a direct pharmacological, metabolic or immunologic effect. For example: a medicine that requires a prescription should be recorded using the  INSTRUCTION.medication_order archetype, focused on the active ingredients, dosage etc.
 
 Not to be used to record data about medical devices, instruments or equipment used during diagnostic or therapeutic procedures - use the appropriate archetype for this purpose. (en)">
+			copyright = <"© openEHR Foundation">
+		>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			purpose = <"*To record the details about a bioreagent or laboratory consumable used as part of a diagnostic or therapeutic procedure in healthcare. (en)">
+			use = <"*Use to record the details about a bioreagent or laboratory consumable used as part of a diagnostic or therapeutic procedure in healthcare.
+
+This archetype has been designed for broad reuse within other archetypes that need to identify the use of a specific bioreagent. For example, to nest within the 'Procedure detail' SLOT in the ACTION.procedure archetype in assisted reproduction treatment procedures such as: 
+- oocyte denudation; 
+- assisted oocyte activation; 
+- cryopreservation and thawing of cells or embryos; and
+- fertilisation by intracytoplasmic sperm injection (ICSI). (en)">
+			keywords = <"*chemical (en)", "*biochemical (en)", "*reagent (en)", "*biosubstance (en)", "*substance (en)", "*laboratory (en)", "*product (en)", "*material (en)", "*medium (en)">
+			misuse = <"*Not to be used to record data about medicinal products that exert a direct pharmacological, metabolic or immunologic effect. For example: a medicine that requires a prescription should be recorded using the  INSTRUCTION.medication_order archetype, focused on the active ingredients, dosage etc.
+
+Not to be used to record data about medical devices, instruments or equipment used during diagnostic or therapeutic procedures - use the appropriate archetype for this purpose. (en)">
+			copyright = <"© openEHR Foundation">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"For å registrere en detaljert oversikt over bioreagenser eller forbruksvarer anvendt ved en diagnostisk- eller behandlingsrettet prosedyre.">
-			keywords = <"kjemikalie","biokjemisk","reagens","bioreagens","stoff","laboratorie","produkt","materiale","medium">
-			copyright = <"© openEHR Foundation">
 			use = <"Bruk for å registrere en detaljert oversikt over bioreagens eller forbruksvare anvendt ved en diagnostisk- eller behandlingsrettet prosedyre.
 
 Denne arketypen ble utviklet for bruke inne i andre arketyper hvor det er nødvendig å identifisere bruk av et bestemt bioreagens. For eksempel kan denne arketypen nøstes i SLOTet 'Prosedyredetaljer' i ACTION.procedure arketypene laget for assistert befruktning:
@@ -110,31 +120,15 @@ Denne arketypen ble utviklet for bruke inne i andre arketyper hvor det er nødve
 - assistert oocyttaktivering;
 - nedfrysing og opptining av celler eller embryo;
 - intracytoplasmatisk spermiemikroinjeksjon.">
+			keywords = <"kjemikalie", "biokjemisk", "reagens", "bioreagens", "stoff", "laboratorie", "produkt", "materiale", "medium">
 			misuse = <"Skal ikke brukes til å registrere data om legemidler som har en direkte farmakologisk, metabolsk eller immunologisk effekt. For eksempel: en medisin som krever resept skal registreres ved å bruke arketypen INSTRUCTION.medication_order (Legemiddelordinering), med fokus på de aktive ingrediensene, dosering osv.
 
 Skal ikke brukes til å registrere data om medisinsk utstyr, instrumenter eller utstyr som brukes under diagnostiske eller terapeutiske prosedyrer - bruk riktig arketype for dette formålet.">
-		>
-		["es-ar"] = <
-			language = <[ISO_639-1::es-ar]>
-			purpose = <"*To record the details about a bioreagent or laboratory consumable used as part of a diagnostic or therapeutic procedure in healthcare. (en)">
-			keywords = <"*chemical (en)","*biochemical (en)","*reagent (en)","*biosubstance (en)","*substance (en)","*laboratory (en)","*product (en)","*material (en)","*medium (en)">
 			copyright = <"© openEHR Foundation">
-			use = <"*Use to record the details about a bioreagent or laboratory consumable used as part of a diagnostic or therapeutic procedure in healthcare.
-
-This archetype has been designed for broad reuse within other archetypes that need to identify the use of a specific bioreagent. For example, to nest within the 'Procedure detail' SLOT in the ACTION.procedure archetype in assisted reproduction treatment procedures such as: 
-- oocyte denudation; 
-- assisted oocyte activation; 
-- cryopreservation and thawing of cells or embryos; and
-- fertilisation by intracytoplasmic sperm injection (ICSI). (en)">
-			misuse = <"*Not to be used to record data about medicinal products that exert a direct pharmacological, metabolic or immunologic effect. For example: a medicine that requires a prescription should be recorded using the  INSTRUCTION.medication_order archetype, focused on the active ingredients, dosage etc.
-
-Not to be used to record data about medical devices, instruments or equipment used during diagnostic or therapeutic procedures - use the appropriate archetype for this purpose. (en)">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
 			purpose = <"*To record the details about a bioreagent or laboratory consumable used as part of a diagnostic or therapeutic procedure in healthcare. (en)">
-			keywords = <"*chemical (en)","*biochemical (en)","*reagent (en)","*biosubstance (en)","*substance (en)","*laboratory (en)","*product (en)","*material (en)","*medium (en)">
-			copyright = <"© openEHR Foundation">
 			use = <"*Use to record the details about a bioreagent or laboratory consumable used as part of a diagnostic or therapeutic procedure in healthcare.
 
 This archetype has been designed for broad reuse within other archetypes that need to identify the use of a specific bioreagent. For example, to nest within the 'Procedure detail' SLOT in the ACTION.procedure archetype in assisted reproduction treatment procedures such as: 
@@ -142,31 +136,15 @@ This archetype has been designed for broad reuse within other archetypes that ne
 - assisted oocyte activation; 
 - cryopreservation and thawing of cells or embryos; and
 - fertilisation by intracytoplasmic sperm injection (ICSI). (en)">
+			keywords = <"*chemical (en)", "*biochemical (en)", "*reagent (en)", "*biosubstance (en)", "*substance (en)", "*laboratory (en)", "*product (en)", "*material (en)", "*medium (en)">
 			misuse = <"*Not to be used to record data about medicinal products that exert a direct pharmacological, metabolic or immunologic effect. For example: a medicine that requires a prescription should be recorded using the  INSTRUCTION.medication_order archetype, focused on the active ingredients, dosage etc.
 
 Not to be used to record data about medical devices, instruments or equipment used during diagnostic or therapeutic procedures - use the appropriate archetype for this purpose. (en)">
-		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			purpose = <"*To record the details about a bioreagent or laboratory consumable used as part of a diagnostic or therapeutic procedure in healthcare. (en)">
-			keywords = <"*chemical (en)","*biochemical (en)","*reagent (en)","*biosubstance (en)","*substance (en)","*laboratory (en)","*product (en)","*material (en)","*medium (en)">
 			copyright = <"© openEHR Foundation">
-			use = <"*Use to record the details about a bioreagent or laboratory consumable used as part of a diagnostic or therapeutic procedure in healthcare.
-
-This archetype has been designed for broad reuse within other archetypes that need to identify the use of a specific bioreagent. For example, to nest within the 'Procedure detail' SLOT in the ACTION.procedure archetype in assisted reproduction treatment procedures such as: 
-- oocyte denudation; 
-- assisted oocyte activation; 
-- cryopreservation and thawing of cells or embryos; and
-- fertilisation by intracytoplasmic sperm injection (ICSI). (en)">
-			misuse = <"*Not to be used to record data about medicinal products that exert a direct pharmacological, metabolic or immunologic effect. For example: a medicine that requires a prescription should be recorded using the  INSTRUCTION.medication_order archetype, focused on the active ingredients, dosage etc.
-
-Not to be used to record data about medical devices, instruments or equipment used during diagnostic or therapeutic procedures - use the appropriate archetype for this purpose. (en)">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record the details about a bioreagent or laboratory consumable used as part of a diagnostic or therapeutic procedure in healthcare.">
-			keywords = <"chemical","biochemical","reagent","biosubstance","substance","laboratory","product","material","medium">
-			copyright = <"© openEHR Foundation">
 			use = <"Use to record the details about a bioreagent or laboratory consumable used as part of a diagnostic or therapeutic procedure in healthcare.
 
 This archetype has been designed for broad reuse within other archetypes that need to identify the use of a specific bioreagent. For example, to nest within the 'Procedure detail' SLOT in the ACTION.procedure archetype in assisted reproduction treatment procedures such as: 
@@ -174,11 +152,31 @@ This archetype has been designed for broad reuse within other archetypes that ne
 - assisted oocyte activation; 
 - cryopreservation and thawing of cells or embryos; and
 - fertilisation by intracytoplasmic sperm injection (ICSI).">
+			keywords = <"chemical", "biochemical", "reagent", "biosubstance", "substance", "laboratory", "product", "material", "medium">
 			misuse = <"Not to be used to record data about medicinal products that exert a direct pharmacological, metabolic or immunologic effect. For example: a medicine that requires a prescription should be recorded using the  INSTRUCTION.medication_order archetype, focused on the active ingredients, dosage etc.
 
 Not to be used to record data about medical devices, instruments or equipment used during diagnostic or therapeutic procedures - use the appropriate archetype for this purpose.">
+			copyright = <"© openEHR Foundation">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"*To record the details about a bioreagent or laboratory consumable used as part of a diagnostic or therapeutic procedure in healthcare. (en)">
+			use = <"*Use to record the details about a bioreagent or laboratory consumable used as part of a diagnostic or therapeutic procedure in healthcare.
+
+This archetype has been designed for broad reuse within other archetypes that need to identify the use of a specific bioreagent. For example, to nest within the 'Procedure detail' SLOT in the ACTION.procedure archetype in assisted reproduction treatment procedures such as: 
+- oocyte denudation; 
+- assisted oocyte activation; 
+- cryopreservation and thawing of cells or embryos; and
+- fertilisation by intracytoplasmic sperm injection (ICSI). (en)">
+			keywords = <"*chemical (en)", "*biochemical (en)", "*reagent (en)", "*biosubstance (en)", "*substance (en)", "*laboratory (en)", "*product (en)", "*material (en)", "*medium (en)">
+			misuse = <"*Not to be used to record data about medicinal products that exert a direct pharmacological, metabolic or immunologic effect. For example: a medicine that requires a prescription should be recorded using the  INSTRUCTION.medication_order archetype, focused on the active ingredients, dosage etc.
+
+Not to be used to record data about medical devices, instruments or equipment used during diagnostic or therapeutic procedures - use the appropriate archetype for this purpose. (en)">
+			copyright = <"© openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Peter Fedorcsak, University of Oslo, Norway (openEHR Editor)", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -237,6 +235,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
