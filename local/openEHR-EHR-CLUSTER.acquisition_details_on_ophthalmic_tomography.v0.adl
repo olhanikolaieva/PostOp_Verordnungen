@@ -1,29 +1,28 @@
-archetype (adl_version=1.4; uid=2edd09cc-bc09-4ae4-a9ed-4ac30a34cd05)
+﻿archetype (adl_version=1.4; uid=2edd09cc-bc09-4ae4-a9ed-4ac30a34cd05)
 	openEHR-EHR-CLUSTER.acquisition_details_on_ophthalmic_tomography.v0
 
 concept
-	[at0000]
-
+	[at0000]	-- Acquisition details on ophthalmic tomography
 language
 	original_language = <[ISO_639-1::en]>
-
 description
 	original_author = <
-		["date"] = <"2015-06-19">
 		["name"] = <"Aitor Eguzkitza">
 		["organisation"] = <"Universidad Pública de Navarra - Complejo Hospitalario de Navarra">
 		["email"] = <"aitor.eguzkiza@unavarra.es">
+		["date"] = <"2015-06-19">
 	>
-	lifecycle_state = <"in_development">
-	other_contributors = <"Jose Andonegui Navarro, Complejo Hospitalario de Navarra, Spain","Luis Serrano Arriezu, Institute of Smart Cities & Universidad Pública de Navarra, Spain">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Register details about settings specified to carry out the acquisitions of a study of ophthalmic tomography.">
-			copyright = <"© openEHR Foundation">
 			use = <"To specify the strategy of acquisitions for ophthalmic tomography either planning the study, or recording the procedure once has been carried out.">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Jose Andonegui Navarro, Complejo Hospitalario de Navarra, Spain", "Luis Serrano Arriezu, Institute of Smart Cities & Universidad Pública de Navarra, Spain">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -36,129 +35,131 @@ description
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- Acquisition details on ophthalmic tomography
+	CLUSTER[at0000] matches {	-- Acquisition details on ophthalmic tomography
 		items cardinality matches {1..*; unordered} matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Laterality
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Laterality
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0002,    -- Left eye
-							at0003,    -- Right eye
-							at0004]    -- Both eyes
+							at0002, 	-- Left eye
+							at0003, 	-- Right eye
+							at0004]	-- Both eyes
 						}
 					}
 				}
 			}
-			ELEMENT[at0072] occurrences matches {0..1} matches {    -- Acquisition method
+			ELEMENT[at0072] occurrences matches {0..1} matches {	-- Acquisition method
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0073,    -- Optical Coherence Tomography Scanner
-							at0074,    -- Retinal Thickness Analyzer
-							at0075,    -- Confocal Scanning Laser Ophthalmoscope
-							at0076,    -- Scheimpflug Camera
-							at0077,    -- Scanning Laser Polarimeter
-							at0078,    -- Elevation-based corneal tomographer
-							at0079,    -- Reflection-based corneal topographer
-							at0080]    -- Interferometry-based corneal tomographer
+							at0073, 	-- Optical Coherence Tomography Scanner
+							at0074, 	-- Retinal Thickness Analyzer
+							at0075, 	-- Confocal Scanning Laser Ophthalmoscope
+							at0076, 	-- Scheimpflug Camera
+							at0077, 	-- Scanning Laser Polarimeter
+							at0078, 	-- Elevation-based corneal tomographer
+							at0079, 	-- Reflection-based corneal topographer
+							at0080]	-- Interferometry-based corneal tomographer
 						}
 					}
 				}
 			}
-			ELEMENT[at0064] occurrences matches {0..*} matches {    -- Study outcome
+			ELEMENT[at0064] occurrences matches {0..*} matches {	-- Study outcome
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0065,    -- Transverse image overview
-							at0066,    -- 3D reconstruction image analysis
-							at0067,    -- Video angiography
-							at0068,    -- Thickness analysis
-							at0069,    -- Thickness evolution along-time (follow-up)
-							at0070,    -- Thickness classification (measured vs normative)
-							at0071]    -- Asymmetry analysis
+							at0065, 	-- Transverse image overview
+							at0066, 	-- 3D reconstruction image analysis
+							at0067, 	-- Video angiography
+							at0068, 	-- Thickness analysis
+							at0069, 	-- Thickness evolution along-time (follow-up)
+							at0070, 	-- Thickness classification (measured vs normative)
+							at0071]	-- Asymmetry analysis
 						}
 					}
 				}
 			}
-			CLUSTER[at0019] occurrences matches {0..1} matches {    -- Predefined scan
+			CLUSTER[at0019] occurrences matches {0..1} matches {	-- Predefined scan
 				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0011] occurrences matches {0..*} matches {    -- Study type
+					ELEMENT[at0011] occurrences matches {0..*} matches {	-- Study type
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0012,    -- Angle
-									at0013,    -- Cornea
-									at0017,    -- Iris
-									at0014,    -- Sclera
-									at0015,    -- Glaucoma
-									at0016]    -- Retina
+									at0012, 	-- Angle
+									at0013, 	-- Cornea
+									at0017, 	-- Iris
+									at0014, 	-- Sclera
+									at0015, 	-- Glaucoma
+									at0016]	-- Retina
 								}
 							}
 						}
 					}
-					ELEMENT[at0005] occurrences matches {0..*} matches {    -- Predefined scans
+					ELEMENT[at0005] occurrences matches {0..*} matches {	-- Predefined scans
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0020,    -- Angle 1 ACA
-									at0021,    -- Angle 2 ACA
-									at0022,    -- Angle small
-									at0023,    -- Cornea dense
-									at0024,    -- Cornea large
-									at0025,    -- Cornea scan 08
-									at0026,    -- Cornea scan 11
-									at0027,    -- Cornea small
-									at0029,    -- Sclera dense
-									at0030,    -- Sclera large
-									at0031,    -- Sclera scan 08
-									at0032,    -- Sclera scan 11
-									at0033,    -- Sclera small
-									at0034,    -- Sclera vol. bleb
-									at0035,    -- Glaucoma dense
-									at0036,    -- Glaucoma Fast
-									at0037,    -- Glaucoma ONH
-									at0038,    -- Glaucoma P. Pole
-									at0039,    -- Glaucoma RNFL
-									at0040,    -- Retina 7 lines
-									at0041,    -- Retina dense
-									at0042,    -- Retina detail
-									at0043,    -- Retina fast
-									at0044,    -- Retina Fast HR
-									at0045,    -- Retina Lin HR
-									at0046]    -- Retina P. Pole
+									at0020, 	-- Angle 1 ACA
+									at0021, 	-- Angle 2 ACA
+									at0022, 	-- Angle small
+									at0023, 	-- Cornea dense
+									at0024, 	-- Cornea large
+									at0025, 	-- Cornea scan 08
+									at0026, 	-- Cornea scan 11
+									at0027, 	-- Cornea small
+									at0029, 	-- Sclera dense
+									at0030, 	-- Sclera large
+									at0031, 	-- Sclera scan 08
+									at0032, 	-- Sclera scan 11
+									at0033, 	-- Sclera small
+									at0034, 	-- Sclera vol. bleb
+									at0035, 	-- Glaucoma dense
+									at0036, 	-- Glaucoma Fast
+									at0037, 	-- Glaucoma ONH
+									at0038, 	-- Glaucoma P. Pole
+									at0039, 	-- Glaucoma RNFL
+									at0040, 	-- Retina 7 lines
+									at0041, 	-- Retina dense
+									at0042, 	-- Retina detail
+									at0043, 	-- Retina fast
+									at0044, 	-- Retina Fast HR
+									at0045, 	-- Retina Lin HR
+									at0046]	-- Retina P. Pole
 								}
 							}
 						}
 					}
 				}
 			}
-			CLUSTER[at0047] occurrences matches {0..1} matches {    -- Custom scan
+			CLUSTER[at0047] occurrences matches {0..1} matches {	-- Custom scan
 				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0048] occurrences matches {0..1} matches {    -- Scan pattern
+					ELEMENT[at0048] occurrences matches {0..1} matches {	-- Scan pattern
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0050,    -- Single
-									at0049,    -- Radial
-									at0053,    -- Star
-									at0051,    -- High speed multi-frame
-									at0052]    -- High resolution multi-frame
+									at0050, 	-- Single
+									at0049, 	-- Radial
+									at0053, 	-- Star
+									at0051, 	-- High speed multi-frame
+									at0052]	-- High resolution multi-frame
 								}
 							}
 						}
 					}
-					ELEMENT[at0058] occurrences matches {0..1} matches {    -- Position of scan pattern
+					ELEMENT[at0058] occurrences matches {0..1} matches {	-- Position of scan pattern
 						value matches {
-							DV_CODED_TEXT matches {*}
+							DV_CODED_TEXT matches {
+								defining_code matches {[ac0001]}		-- Anatomic structures of eye
+							}
 						}
 					}
-					ELEMENT[at0054] occurrences matches {0..1} matches {    -- Scan size (width or diameter)
+					ELEMENT[at0054] occurrences matches {0..1} matches {	-- Scan size (width or diameter)
 						value matches {
 							C_DV_QUANTITY <
 								property = <[openehr::497]>
@@ -171,7 +172,7 @@ definition
 							>
 						}
 					}
-					ELEMENT[at0056] occurrences matches {0..1} matches {    -- Scan size (height)
+					ELEMENT[at0056] occurrences matches {0..1} matches {	-- Scan size (height)
 						value matches {
 							C_DV_QUANTITY <
 								property = <[openehr::497]>
@@ -184,7 +185,7 @@ definition
 							>
 						}
 					}
-					ELEMENT[at0062] occurrences matches {0..1} matches {    -- Distance between sections
+					ELEMENT[at0062] occurrences matches {0..1} matches {	-- Distance between sections
 						value matches {
 							C_DV_QUANTITY <
 								property = <[openehr::122]>
@@ -197,7 +198,7 @@ definition
 							>
 						}
 					}
-					ELEMENT[at0057] occurrences matches {0..1} matches {    -- Section scans
+					ELEMENT[at0057] occurrences matches {0..1} matches {	-- Section scans
 						value matches {
 							DV_COUNT matches {
 								magnitude matches {|>=1|}
@@ -208,6 +209,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	terminologies_available = <"SNOMED-CT", ...>
@@ -493,7 +495,17 @@ ontology
 			>
 		>
 	>
-	term_binding = <
+	constraint_definitions = <
+		["en"] = <
+			items = <
+				["ac0001"] = <
+					text = <"Anatomic structures of eye">
+					description = <"List of regions of interest in the study of eye.">
+				>
+			>
+		>
+	>
+	term_bindings = <
 		["SNOMED-CT"] = <
 			items = <
 				["at0001"] = <[SNOMED-CT::272741003]>
