@@ -1,9 +1,8 @@
-archetype (adl_version=1.4; uid=a11c81e6-a2c2-4bdc-9c53-3e1584c87f01)
+﻿archetype (adl_version=1.4; uid=a11c81e6-a2c2-4bdc-9c53-3e1584c87f01)
 	openEHR-EHR-CLUSTER.diagnostic_criteria_dr.v0
 
 concept
-	[at0000]
-
+	[at0000]	-- Diagnostic criteria DR
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -14,38 +13,37 @@ language
 			>
 		>
 	>
-
 description
 	original_author = <
-		["date"] = <"2016-07-25">
 		["name"] = <"Aitor Eguzkitza">
 		["organisation"] = <"Universidad Pública de Navarra - Complejo Hospitalario de Navarra">
 		["email"] = <"aitor.eguzkiza@unavarra.es">
+		["date"] = <"2016-07-25">
 	>
-	lifecycle_state = <"in_development">
-	other_contributors = <"José Andonegui, Hospital de Navarra, jose.andonegui.navarro@cfnavarra.es","Luis Serrano, Universidad Pública de Navarra (UPNA), lserrano@unavarra.es","Jesús D. Trigo, Universidad Pública de Navarra (UPNA), jesusdaniel.trigo@unavarra.es">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record the clinical findings on examination of the eye fundus in which diagnostic decision is based.">
-			keywords = <"eye","posterior chamber","examination">
-			copyright = <"© openEHR Foundation">
 			use = <"It can be attached to EVALUATION type archetypes related to the diagnose of DR. This CLUSTER fits perfectly into the \"Problem/diagnosis\" archetype.
 This archetype is applied to key findings supporting the diagnostic decision.">
+			keywords = <"eye", "posterior chamber", "examination">
 			misuse = <"Do not get confused with \"examination_findings\" archetypes, since these are similar in the use case of DR's diagnose.
 While \"examination_findings\" include objectively all findings within eye fundus, this archetype about diagnostic criterion focuses on the specific findings in which diagnosis is grounded.">
+			copyright = <"© openEHR Foundation">
 		>
 		["es"] = <
 			language = <[ISO_639-1::es]>
 			purpose = <"Registrar detalles clínicos observados en el estudio del fondo de ojo en los que se ha basado la decisión diagnóstica.">
-			keywords = <"ojo","cámara posterior">
-			copyright = <"© openEHR Foundation">
 			use = <"Se utiliza anidado a arquetipos de tipo EVALUATION relacionados con el diagnóstico de la RD. Encaja perfectamente en el arquetipo \"Problem/diagnosis\". 
 
 Este arquetipo se aplica a los hallazgos que han sido clave en la decisión diagnóstica.">
+			keywords = <"ojo", "cámara posterior">
 			misuse = <"No debe confundirse con los arquetipos \"examination_findings\", ya que en el caso de la RD es muy similar. Mientras \"examination_findings\" recoge todos los hallazgos de forma objetiva y sin tener en cuenta ninguna afección, este arquetipo de criterio diagnóstico se centra en los hallazgos concretos que han fundamentado el diagnóstico.">
+			copyright = <"© openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"José Andonegui, Hospital de Navarra, jose.andonegui.navarro@cfnavarra.es", "Luis Serrano, Universidad Pública de Navarra (UPNA), lserrano@unavarra.es", "Jesús D. Trigo, Universidad Pública de Navarra (UPNA), jesusdaniel.trigo@unavarra.es">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -58,58 +56,63 @@ Este arquetipo se aplica a los hallazgos que han sido clave en la decisión diag
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- Diagnostic criteria DR
+	CLUSTER[at0000] matches {	-- Diagnostic criteria DR
 		items cardinality matches {1..*; unordered} matches {
-			ELEMENT[at0052] occurrences matches {0..1} matches {    -- Patterns of leakage
+			ELEMENT[at0052] occurrences matches {0..1} matches {	-- Patterns of leakage
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0059,    -- No leakage
-							at0054,    -- Neovascular leakage
-							at0055,    -- Macular leakage
-							at0056,    -- Focal leakage
-							at0057,    -- Indeterminate leakage
-							at0058]    -- Mixed leakage
+							at0059, 	-- No leakage
+							at0054, 	-- Neovascular leakage
+							at0055, 	-- Macular leakage
+							at0056, 	-- Focal leakage
+							at0057, 	-- Indeterminate leakage
+							at0058]	-- Mixed leakage
 						}
 					}
 				}
 			}
-			ELEMENT[at0045] occurrences matches {0..1} matches {    -- Patterns of macular ischaemia
+			ELEMENT[at0045] occurrences matches {0..1} matches {	-- Patterns of macular ischaemia
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0050,    -- No macular edema
-							at0048,    -- Diffuse diabetic macular edema
-							at0049]    -- Focal diabetic macular edema
+							at0050, 	-- No macular edema
+							at0048, 	-- Diffuse diabetic macular edema
+							at0049]	-- Focal diabetic macular edema
 						}
 					}
 				}
 			}
-			ELEMENT[at0036] occurrences matches {0..1} matches {    -- Patterns of retinopathy
+			ELEMENT[at0036] occurrences matches {0..1} matches {	-- Patterns of retinopathy
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0038,    -- Stable diabetic retinopathy
-							at0039]    -- Proliferative diabetic retinopathy
+							at0038, 	-- Stable diabetic retinopathy
+							at0039]	-- Proliferative diabetic retinopathy
 						}
 					}
 				}
 			}
-			ELEMENT[at0053] occurrences matches {0..1} matches {    -- Patterns of retinal ischaemia
+			ELEMENT[at0053] occurrences matches {0..1} matches {	-- Patterns of retinal ischaemia
 				value matches {
-					DV_BOOLEAN matches {*}
+					DV_BOOLEAN matches {
+						value matches {True, False}
+					}
 				}
 			}
-			ELEMENT[at0060] occurrences matches {0..1} matches {    -- Clinical findings diabetic retinopathy
+			ELEMENT[at0060] occurrences matches {0..1} matches {	-- Clinical findings diabetic retinopathy
 				value matches {
-					DV_CODED_TEXT matches {*}
+					DV_CODED_TEXT matches {
+						defining_code matches {[ac0001]}		-- Findings on the posterior chamber of the eye
+					}
 				}
 			}
 		}
 	}
+
 
 ontology
 	terminologies_available = <"SNOMED-CT", ...>
@@ -259,7 +262,25 @@ ontology
 			>
 		>
 	>
-	term_binding = <
+	constraint_definitions = <
+		["es"] = <
+			items = <
+				["ac0001"] = <
+					text = <"Hallazgos cámara posterior del ojo">
+					description = <"Lista de los posibles hallazogs clínicos en la cámara posterior del ojo.">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["ac0001"] = <
+					text = <"Findings on the posterior chamber of the eye">
+					description = <"List of possible clinical findings on posterior chamber of the eye.">
+				>
+			>
+		>
+	>
+	term_bindings = <
 		["SNOMED-CT"] = <
 			items = <
 				["at0036"] = <[SNOMED-CT::4855003]>
